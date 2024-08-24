@@ -71,4 +71,11 @@
             calc(99.69% - 0.99rem) calc(44.4% - -0.11rem)
         );
     }
+
+    .card {
+        border-width: theme("borderWidth.2");
+        border-color: theme("borderColor.black");
+        box-shadow: theme("boxShadow.black");
+        border-radius: theme("borderRadius.lg");
+    }
 }

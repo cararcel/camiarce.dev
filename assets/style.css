@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "indie_flower";
+    src: url("./fonts/IndieFlower.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer components {
+    .starburst {
+        aspect-ratio: 1;
+        clip-path: polygon(
+            100% 50%,
+            calc(99.69% - 0.99rem) calc(55.6% - 0.11rem),
+            98.75% 61.13%,
+            calc(97.19% - 0.94rem) calc(66.51% - 0.33rem),
+            95.05% 71.69%,
+            calc(92.34% - 0.85rem) calc(76.6% - 0.53rem),
+            89.09% 81.17%,
+            calc(85.36% - 0.71rem) calc(85.36% - 0.71rem),
+            81.17% 89.09%,
+            calc(76.6% - 0.53rem) calc(92.34% - 0.85rem),
+            71.69% 95.05%,
+            calc(66.51% - 0.33rem) calc(97.19% - 0.94rem),
+            61.13% 98.75%,
+            calc(55.6% - 0.11rem) calc(99.69% - 0.99rem),
+            50% 100%,
+            calc(44.4% - -0.11rem) calc(99.69% - 0.99rem),
+            38.87% 98.75%,
+            calc(33.49% - -0.33rem) calc(97.19% - 0.94rem),
+            28.31% 95.05%,
+            calc(23.4% - -0.53rem) calc(92.34% - 0.85rem),
+            18.83% 89.09%,
+            calc(14.64% - -0.71rem) calc(85.36% - 0.71rem),
+            10.91% 81.17%,
+            calc(7.66% - -0.85rem) calc(76.6% - 0.53rem),
+            4.95% 71.69%,
+            calc(2.81% - -0.94rem) calc(66.51% - 0.33rem),
+            1.25% 61.13%,
+            calc(0.31% - -0.99rem) calc(55.6% - 0.11rem),
+            0% 50%,
+            calc(0.31% - -0.99rem) calc(44.4% - -0.11rem),
+            1.25% 38.87%,
+            calc(2.81% - -0.94rem) calc(33.49% - -0.33rem),
+            4.95% 28.31%,
+            calc(7.66% - -0.85rem) calc(23.4% - -0.53rem),
+            10.91% 18.83%,
+            calc(14.64% - -0.71rem) calc(14.64% - -0.71rem),
+            18.83% 10.91%,
+            calc(23.4% - -0.53rem) calc(7.66% - -0.85rem),
+            28.31% 4.95%,
+            calc(33.49% - -0.33rem) calc(2.81% - -0.94rem),
+            38.87% 1.25%,
+            calc(44.4% - -0.11rem) calc(0.31% - -0.99rem),
+            50% 0%,
+            calc(55.6% - 0.11rem) calc(0.31% - -0.99rem),
+            61.13% 1.25%,
+            calc(66.51% - 0.33rem) calc(2.81% - -0.94rem),
+            71.69% 4.95%,
+            calc(76.6% - 0.53rem) calc(7.66% - -0.85rem),
+            81.17% 10.91%,
+            calc(85.36% - 0.71rem) calc(14.64% - -0.71rem),
+            89.09% 18.83%,
+            calc(92.34% - 0.85rem) calc(23.4% - -0.53rem),
+            95.05% 28.31%,
+            calc(97.19% - 0.94rem) calc(33.49% - -0.33rem),
+            98.75% 38.87%,
+            calc(99.69% - 0.99rem) calc(44.4% - -0.11rem)
+        );
+    }
+}

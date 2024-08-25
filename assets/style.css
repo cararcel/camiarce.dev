@@ -3,27 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "indie_flower";
-    src: url("./fonts/IndieFlower.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "lexend";
-    src: url("./fonts/Lexend-Black.woff2") format("woff2");
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "lexend";
-    src: url("./fonts/Lexend-Bold.woff2") format("woff2");
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
     font-family: "lexend";
     src: url("./fonts/Lexend-ExtraBold.woff2") format("woff2");
     font-weight: 800;
@@ -34,13 +13,6 @@
     font-family: "lexend";
     src: url("./fonts/Lexend-SemiBold.woff2") format("woff2");
     font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "lexend";
-    src: url("./fonts/Lexend-Regular.woff2") format("woff2");
-    font-weight: normal;
     font-style: normal;
 }
 

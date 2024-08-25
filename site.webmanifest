@@ -1,6 +1,7 @@
 {
     "name": "Camila Arce",
     "short_name": "Cami",
+    "start_url": "https://camiarce.dev",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

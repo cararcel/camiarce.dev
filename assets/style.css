@@ -44,6 +44,27 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "slukoni";
+    src: url("./fonts/Slukoni.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "wc_mano";
+    src: url("./fonts/WCManoNegraBoldBta.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "wc_mano";
+    src: url("./fonts/WCManoNegraBta.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 @layer components {
     .starburst {
         aspect-ratio: 1;

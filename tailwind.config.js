@@ -12,8 +12,9 @@ module.exports = {
         "black-raised": "10px 10px 0 0 rgba(0, 0, 0, 1)",
       },
       fontFamily: {
-        handwritten: ["indie_flower", ...defaultTheme.fontFamily.sans],
-        title: ["lexend", ...defaultTheme.fontFamily.sans],
+        handwritten: ["wc_mano", ...defaultTheme.fontFamily.sans],
+        title: ["slukoni", ...defaultTheme.fontFamily.sans],
+        subtitle: ["lexend", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         scale: {

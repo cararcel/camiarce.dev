@@ -7,6 +7,13 @@
 
     <title>Camila Arce</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#fbbf24" />
+    <meta name="theme-color" content="#fbbf24" />
+
     <meta name="description" content="Web developer, biochemist, cat mom & mom.">
 
     <meta property="og:site_name" content="Camila Arce" />
@@ -18,7 +25,7 @@
 
 <body class="font-sans antialiased min-h-screen bg-yellow-400 flex flex-col">
     <header class="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
-        <nav class="w-full bg-blue-300 flex justify-around md:justify-end space-x-2 items-center card px-4">
+        <nav class="w-full bg-blue-300 flex justify-around md:justify-end space-x-2 items-center card px-4 font-subtitle">
             <a href="#about-me" class="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline">About me</a>
             <a href="#projects" class="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline">Projects</a>
             <a title="contact me on LinkedIn" href="https://www.linkedin.com/in/arce-camila/" class="block font-extrabold rounded-full bg-green-400 shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1">
@@ -56,7 +63,7 @@
                                 <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
                             </svg>
                         </div>
-                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
                             Web developer
                         </figcaption>
                     </figure>
@@ -67,7 +74,7 @@
                         <div class="flex justify-around items-end h-10 m-4">
                             <img class="group-hover:animate-spin h-24" src="./assets/img/microscope.png" alt="One of my microscope">
                         </div>
-                        <figcaption class="flex-shrink w-full h-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
+                        <figcaption class="flex-shrink w-full h-full bg-white rounded-b-md text-md md:text-lg font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
                             Biochemist
                         </figcaption>
                     </figure>
@@ -79,7 +86,7 @@
                             <img class="group-hover:animate-spin h-24" src="./assets/img/conito.png" alt="A picture of one of my cats">
                             <img class="group-hover:animate-spin h-24" src="./assets/img/lilith.png" alt="A picture of my other cat">
                         </div>
-                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-semibold font-title tracking-wider border-t-2 border-black p-2">
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-semibold font-subtitle tracking-wider border-t-2 border-black p-2">
                             Cat mom
                         </figcaption>
                     </figure>
@@ -90,7 +97,7 @@
                         <div class="flex justify-around items-end h-10 m-4">
                             <img class="group-hover:animate-spin h-24" src="./assets/img/baby-bottle.png" alt="A baby bottle">
                         </div>
-                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
                             Mom
                         </figcaption>
                     </figure>
@@ -204,8 +211,19 @@
                     </div>
                 </div>
 
-                <div class="card bg-white p-4">
+                <div class="group card bg-white p-4">
                     <div class="text-2xl font-black">Kasa</div>
+
+                    <figure class="h-56 overflow-hidden m-2 border-orange-400 border rounded-sm">
+                        <div class="h-4 bg-orange-400 pl-1 gap-0.5 flex flex-start">
+                            <div class="flex justify-start items-center gap-0.5">
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                            </div>
+                        </div>
+                        <img loading="lazy" class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-1000" src="./assets/img/kasa-desktop.png" alt="Screenshot of the Nina Carducci website">
+                    </figure>
 
                     <div class="flex flex-wrap gap-4">
                         <a title="Check the GitHub repository" class="font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1" href="https://github.com/cararcel/kasa-oc-p5"><svg class="size-5 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -223,8 +241,19 @@
                     </div>
                 </div>
 
-                <div class="card bg-white p-4">
-                    <div class="text-2xl font-black">Kasa</div>
+                <div class="group card bg-white p-4">
+                    <div class="text-2xl font-black">Sophie Bluel</div>
+
+                    <figure class="h-56 overflow-hidden m-2 border-green-400 border rounded-sm">
+                        <div class="h-4 bg-green-400 pl-1 gap-0.5 flex flex-start">
+                            <div class="flex justify-start items-center gap-0.5">
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                                <div class="rounded-full bg-gray-200 size-1"></div>
+                            </div>
+                        </div>
+                        <img loading="lazy" class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-1000" src="./assets/img/sophie-bluel-desktop.png" alt="Screenshot of the Sophie Bluel website">
+                    </figure>
 
                     <div class="flex flex-wrap space-x-4">
                         <a title="Check the GitHub repository" class="font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1" href="https://github.com">
@@ -234,11 +263,15 @@
                             </svg> <span class="hidden md:inline">GitHub</span></a>
 
                         <div class="font-extrabold rounded-lg bg-blue-300 shadow-black-small border-2 border-black px-2 py-1">
-                            ReactJS
+                            HTML
                         </div>
 
-                        <div class="font-extrabold rounded-lg bg-pink-400 shadow-black-small border-2 border-black px-2 py-1">
-                            SCSS
+                        <div class="font-extrabold rounded-lg bg-orange-400 shadow-black-small border-2 border-black px-2 py-1">
+                            CSS
+                        </div>
+
+                        <div class="font-extrabold rounded-lg bg-yellow-400 shadow-black-small border-2 border-black px-2 py-1">
+                            JavaScript
                         </div>
                     </div>
                 </div>

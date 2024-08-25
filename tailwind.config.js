@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html"],
@@ -10,7 +12,8 @@ module.exports = {
         "black-raised": "10px 10px 0 0 rgba(0, 0, 0, 1)",
       },
       fontFamily: {
-        handwritten: "indie_flower",
+        handwritten: ["indie_flower", ...defaultTheme.fontFamily.sans],
+        title: ["lexend", ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         scale: {

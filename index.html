@@ -33,9 +33,9 @@
 
     <main class="flex-grow">
         <section class="max-w-4xl mx-auto my-12 md:my-24">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-16 px-4">
                 <div class="group col-span-2 card bg-white p-4 relative">
-                    <p class="text-5xl mb-6 font-black tracking-wide">Hello,</p>
+                    <p class="text-5xl mb-6 font-black tracking-wide font-title">Hello,</p>
                     <p class="text-2xl md:text-3xl font-bold">
                         My name is: <span class="text-3xl md:text-4xl font-handwritten underline font-bold">Camila
                             Arce</span>
@@ -48,40 +48,49 @@
                 </div>
                 <div class="hidden md:block md:col-span-2">
                 </div>
-                <div class="group card bg-pink-400 flex justify-center items-center flex-col overflow-hidden">
-                    <svg class="group-hover:animate-spin m-6 size-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                        <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
-                    </svg>
-                    <span class="w-full bg-white text-md md:text-lg font-semibold tracking-wider border-t-2 border-black p-2">
-                        Web developer
-                    </span>
+                <div class="group card bg-pink-400">
+
+                    <figure class="w-full flex justify-center flex-col">
+                        <div class="flex justify-around items-end h-10 m-4">
+                            <svg class="group-hover:animate-spin size-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z" />
+                            </svg>
+                        </div>
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
+                            Web developer
+                        </figcaption>
+                    </figure>
                 </div>
 
-                <div class="group card bg-green-300 flex justify-center items-center flex-col overflow-hidden">
-                    <svg class="group-hover:animate-spin m-6 size-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                        <path d="M416 0c17.7 0 32 14.3 32 32c0 59.8-30.3 107.5-69.4 146.6c-28 28-62.5 53.5-97.3 77.4l-2.5 1.7c-11.9 8.1-23.8 16.1-35.5 23.9c0 0 0 0 0 0s0 0 0 0s0 0 0 0l-1.6 1c-6 4-11.9 7.9-17.8 11.9c-20.9 14-40.8 27.7-59.3 41.5l118.5 0c-9.8-7.4-20.1-14.7-30.7-22.1l7-4.7 3-2c15.1-10.1 30.9-20.6 46.7-31.6c25 18.1 48.9 37.3 69.4 57.7C417.7 372.5 448 420.2 448 480c0 17.7-14.3 32-32 32s-32-14.3-32-32L64 480c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-59.8 30.3-107.5 69.4-146.6c28-28 62.5-53.5 97.3-77.4c-34.8-23.9-69.3-49.3-97.3-77.4C30.3 139.5 0 91.8 0 32C0 14.3 14.3 0 32 0S64 14.3 64 32l320 0c0-17.7 14.3-32 32-32zM338.6 384l-229.2 0c-10.1 10.6-18.6 21.3-25.5 32l280.2 0c-6.8-10.7-15.3-21.4-25.5-32zM109.4 128l229.2 0c10.1-10.7 18.6-21.3 25.5-32L83.9 96c6.8 10.7 15.3 21.3 25.5 32zm55.4 48c18.4 13.8 38.4 27.5 59.3 41.5c20.9-14 40.8-27.7 59.3-41.5l-118.5 0z" />
-                    </svg>
-                    <span class="w-full bg-white text-md md:text-lg font-semibold tracking-wider border-t-2 border-black p-2">
-                        Biochemist
-                    </span>
+                <div class="group card bg-green-300">
+                    <figure class="w-full flex justify-center flex-col">
+                        <div class="flex justify-around items-end h-10 m-4">
+                            <img class="group-hover:animate-spin h-24" src="./assets/img/microscope.png" alt="One of my microscope">
+                        </div>
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
+                            Biochemist
+                        </figcaption>
+                    </figure>
                 </div>
 
                 <div class="group card bg-orange-400">
-                    <figure class="w-full flex justify-center items-center flex-col">
-                        <div class="flex justify-around items-center h-24 m-4">
-                            <img class="group-hover:animate-spin h-20 sm:h-24" src="./assets/img/conito.png" alt="A picture of one of my cats">
-                            <img class="group-hover:animate-spin h-20 sm:h-24" src="./assets/img/lilith.png" alt="A picture of my other cat">
+                    <figure class="w-full flex justify-center flex-col">
+                        <div class="flex justify-around items-end h-10 m-4">
+                            <img class="group-hover:animate-spin h-24" src="./assets/img/conito.png" alt="A picture of one of my cats">
+                            <img class="group-hover:animate-spin h-24" src="./assets/img/lilith.png" alt="A picture of my other cat">
                         </div>
-                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-semibold tracking-wider border-t-2 border-black p-2">
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-semibold font-title tracking-wider border-t-2 border-black p-2">
                             Cat mom
                         </figcaption>
                     </figure>
                 </div>
 
                 <div class="group card bg-purple-400">
-                    <figure class="w-full flex justify-center items-center flex-col">
-                        <img class="group-hover:animate-spin h-24 m-4" src="./assets/img/baby-bottle.png" alt="A baby bottle">
-                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-semibold tracking-wider border-t-2 border-black p-2">
+                    <figure class="w-full flex justify-center flex-col">
+                        <div class="flex justify-around items-end h-10 m-4">
+                            <img class="group-hover:animate-spin h-24" src="./assets/img/baby-bottle.png" alt="A baby bottle">
+                        </div>
+                        <figcaption class="flex-shrink w-full bg-white rounded-b-md text-md md:text-lg font-title font-semibold tracking-wider border-t-2 border-black p-2">
                             Mom
                         </figcaption>
                     </figure>
@@ -90,7 +99,7 @@
         </section>
 
         <section class="max-w-4xl mx-auto my-12 md:my-24 px-4">
-            <h2 id="about-me" class="text-5xl mb-6 font-black tracking-wide">About me</h2>
+            <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">About me</h2>
 
             <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
                 Hi! Im a web developer that just came out from the oven (I just finished my formation). I come from a scientific background, I studied Biochemistry and I specialises in neuroscience research. But my journey in tech began after I moved to south of France and I wanted a job that I can do from anywhere (or at least not having to look for a lab in my area of expertise). Since then, I’ve had the opportunity to learn by myself watching videos and playing games (codecombat is really nice to start coding).
@@ -127,7 +136,7 @@
         </section>
 
         <section class="pb-24 px-4 max-w-4xl mx-auto">
-            <h2 id="projects" class="text-5xl mb-6 font-black tracking-wide">Projects</h2>
+            <h2 id="projects" class="text-5xl mb-6 font-title font-black tracking-wide">Projects</h2>
 
             <div class="grid grid-colds-1 md:grid-cols-2 gap-6">
                 <div class="group card bg-white p-4">
@@ -141,7 +150,7 @@
                                 <div class="rounded-full bg-gray-200 size-1"></div>
                             </div>
                         </div>
-                        <img class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500" src="./assets/img/booki-desktop.png" alt="Screenshot of the Booki website">
+                        <img loading="lazy" class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500" src="./assets/img/booki-desktop.png" alt="Screenshot of the Booki website">
                     </figure>
 
                     <div class="flex flex-wrap gap-4">
@@ -172,7 +181,7 @@
                                 <div class="rounded-full bg-gray-200 size-1"></div>
                             </div>
                         </div>
-                        <img class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-1000" src="./assets/img/nina-carducci-desktop.png" alt="Scrrenshot of the Nina Carducci website">
+                        <img loading="lazy" class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-1000" src="./assets/img/nina-carducci-desktop.png" alt="Scrrenshot of the Nina Carducci website">
                     </figure>
 
                     <div class="flex flex-wrap gap-4">
@@ -254,7 +263,7 @@
 
     <div class="mt-96 mb-16 mx-auto">
         <figure class="p-4 md:p-0">
-            <img class="card" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhyajFxY291dmd0NzZrZ2Y2dWw3MHoyN2lhbXRrbHNtOXAzb3l0ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5kq0GCjHA8Rwc/giphy.webp" alt="">
+            <img class="card" loading="lazy" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhyajFxY291dmd0NzZrZ2Y2dWw3MHoyN2lhbXRrbHNtOXAzb3l0ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5kq0GCjHA8Rwc/giphy.webp" alt="">
             <figcaption class="mt-2 font-handwritten text-xl">Never gonna give you up...</figcaption>
         </figure>
     </div>

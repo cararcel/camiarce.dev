@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "lexend";
-    src: url("./fonts/Lexend-ExtraBold.woff2") format("woff2");
+    font-family: 'lexend';
+    src: url('./fonts/Lexend-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
-    font-family: "lexend";
-    src: url("./fonts/Lexend-SemiBold.woff2") format("woff2");
+    font-family: 'lexend';
+    src: url('./fonts/Lexend-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
-    font-family: "slukoni";
-    src: url("./fonts/Slukoni.woff") format("woff");
+    font-family: 'slukoni';
+    src: url('./assets/fonts/Slukoni.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
-    font-family: "wc_mano";
-    src: url("./fonts/WCManoNegraBoldBta.woff") format("woff");
+    font-family: 'wc_mano';
+    src: url('./assets/fonts/WCManoNegraBoldBta.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: fallback;
 }
 
 @font-face {
-    font-family: "wc_mano";
-    src: url("./fonts/WCManoNegraBta.woff") format("woff");
+    font-family: 'wc_mano';
+    src: url('./assets/fonts/WCManoNegraBta.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: fallback;
@@ -106,9 +106,9 @@
     }
 
     .card {
-        border-width: theme("borderWidth.2");
-        border-color: theme("borderColor.black");
-        box-shadow: theme("boxShadow.black");
-        border-radius: theme("borderRadius.lg");
+        border-width: theme('borderWidth.2');
+        border-color: theme('borderColor.black');
+        box-shadow: theme('boxShadow.black');
+        border-radius: theme('borderRadius.lg');
     }
 }

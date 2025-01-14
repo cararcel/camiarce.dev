@@ -1,795 +1,585 @@
-import 'react';
+import "react";
+import Card from "./assets/components/Card";
+import Link from "./assets/components/Link";
+import LinkedIn from "./assets/components/icons/linkedIn";
+import GitHub from "./assets/components/icons/github";
+import Tag from "./assets/components/Tag";
+import ColorSwatch from "./assets/components/icons/ColorSwatch";
+import MobilePhone from "./assets/components/icons/MobilePhone";
+import Debugging from "./assets/components/icons/Debugging";
+import Seo from "./assets/components/icons/Seo";
 
 function App() {
-    return (
-        <>
-            <header className="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
-                <nav className="w-full bg-blue-300 flex justify-around md:justify-end space-x-2 items-center card px-4 font-subtitle">
-                    <a
-                        href="#about-me"
-                        className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
-                    >
-                        About me
-                    </a>
-                    <a
-                        href="#projects"
-                        className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
-                    >
-                        Projects
-                    </a>
-                    <a
-                        title="contact me on LinkedIn"
-                        target="_blank"
-                        href="https://www.linkedin.com/in/arce-camila/"
-                        className="font-extrabold rounded-full bg-green-400 shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1 flex items-center gap-1"
-                    >
-                        <span className="hidden md:inline">Contact me on</span>
-                        <svg
-                            className="size-5"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"
-                        >
-                            <title>LinkedIn</title>
-                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                        </svg>
-                    </a>
-                </nav>
-            </header>
+  return (
+    <>
+      <header className="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
+        <nav className="w-full bg-blue-300 flex justify-around md:justify-end space-x-2 items-center card px-4 font-subtitle">
+          <a
+            href="#about-me"
+            className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
+          >
+            About me
+          </a>
+          <a
+            href="#projects"
+            className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
+          >
+            Projects
+          </a>
+          <Link
+            title="contact me on LinkedIn"
+            target="_blank"
+            href="https://www.linkedin.com/in/arce-camila/"
+            className=" bg-green-400 px-3 py-2"
+          >
+            <span className="hidden md:inline">Contact me on</span>
+            <LinkedIn className="size-5" />
+          </Link>
+        </nav>
+      </header>
 
-            <main className="flex-grow">
-                <section className="max-w-4xl mx-auto my-12 md:my-24">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-16 px-4">
-                        <div className="group col-span-2 card bg-white p-4 relative">
-                            <p className="text-5xl mb-6 font-black tracking-wide font-title">
-                                Hello,
-                            </p>
-                            <div className="text-2xl md:text-3xl font-bold">
-                                My name is:
-                                <h1 className="inline-block text-3xl md:text-4xl font-handwritten font-bold">
-                                    Camila Arce
-                                </h1>
-                            </div>
+      <main className="flex-grow">
+        <section className="max-w-4xl mx-auto my-12 md:my-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-16 px-4">
+            <Card className="group col-span-2 bg-white p-4 relative">
+              <p className="text-5xl mb-6 font-black tracking-wide font-title">
+                Hello,
+              </p>
+              <div className="text-2xl md:text-3xl font-bold">
+                My name is:
+                <h1 className="inline-block text-3xl md:text-4xl font-handwritten font-bold">
+                  Camila Arce
+                </h1>
+              </div>
 
-                            <div className="animate-scale duration-100 transition absolute -top-16 right-3 starburst border-1 border-black w-28 md:w-36 bg-green-400">
-                                <div className="flex justify-center items-center h-full w-full font-handwritten font-black text-lg md:text-xl text-center -rotate-12">
-                                    Available
-                                    <br />
-                                    to work
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-span-2 grid gap-6">
-                            <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-6">
-                                <span className="flex w-full justify-center items-center font-title text-4xl sm:text-3xl">
-                                    I speak
-                                </span>
-
-                                <div>
-                                    <a
-                                        title="Switch to Spanish"
-                                        className="font-extrabold rounded-full bg-white hover:bg-red-500 hover:text-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-3 py-2 flex items-center gap-1"
-                                        target="_self"
-                                        href="/es"
-                                    >
-                                        <span className="text-lg">🇨🇱</span>
-                                        <span className="text-lg">Español</span>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <a
-                                        title="Switch to English"
-                                        className="font-extrabold rounded-full bg-white hover:bg-red-500 hover:text-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-3 py-2 flex items-center gap-1"
-                                        target="_self"
-                                        href="/"
-                                    >
-                                        <span className="text-lg">🇬🇧</span>
-                                        <span className="text-lg">English</span>
-                                    </a>
-                                </div>
-
-                                <div>
-                                    <a
-                                        title="Switch to French"
-                                        className="font-extrabold rounded-full bg-white hover:bg-red-500 hover:text-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-3 py-2 flex items-center gap-1"
-                                        target="_self"
-                                        href="/fr"
-                                    >
-                                        <span className="text-lg">🇫🇷</span>
-                                        <span className="text-lg">
-                                            Français
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="group card bg-pink-400">
-                            <figure className="w-full flex justify-center flex-col">
-                                <div className="flex justify-around items-end h-10 m-4">
-                                    <img
-                                        className="group-hover:animate-spin h-24"
-                                        src="/assets/img/laptop.webp"
-                                        srcSet="/assets/img/laptop.webp, /assets/img/laptop@2x.webp 2x"
-                                        alt="My laptop"
-                                    />
-                                </div>
-                                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                                    Web developer
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div className="group card bg-green-300">
-                            <figure className="w-full h-full flex justify-center flex-col">
-                                <div className="flex justify-around items-end h-10 m-4">
-                                    <img
-                                        className="group-hover:animate-spin h-24"
-                                        src="/assets/img/microscope.webp"
-                                        srcSet="/assets/img/microscope.webp, /assets/img/microscope@2x.webp 2x"
-                                        alt="One of my microscope"
-                                    />
-                                </div>
-                                <figcaption className="flex-shrink w-full h-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                                    Biochemist
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div className="group card bg-orange-400">
-                            <figure className="w-full flex justify-center flex-col">
-                                <div className="flex justify-around items-end h-10 m-4">
-                                    <img
-                                        className="group-hover:animate-spin h-24"
-                                        src="/assets/img/conito.webp"
-                                        srcSet="/assets/img/conito.webp, /assets/img/conito@2x.webp 2x"
-                                        alt="A picture of one of my cats"
-                                    />
-                                    <img
-                                        className="group-hover:animate-spin h-24"
-                                        src="/assets/img/lilith.webp"
-                                        srcSet="/assets/img/lilith.webp, /assets/img/lilith@2x.webp 2x"
-                                        alt="A picture of my other cat"
-                                    />
-                                </div>
-                                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-semibold font-subtitle tracking-wider border-t-2 border-black p-2">
-                                    Cat mom
-                                </figcaption>
-                            </figure>
-                        </div>
-
-                        <div className="group card bg-purple-400">
-                            <figure className="w-full flex justify-center flex-col">
-                                <div className="flex justify-around items-end h-10 m-4">
-                                    <img
-                                        className="group-hover:animate-spin h-24"
-                                        src="/assets/img/baby-bottle.webp"
-                                        srcSet="/assets/img/baby-bottle.webp, /assets/img/baby-bottle@2x.webp 2x"
-                                        alt="A baby bottle"
-                                    />
-                                </div>
-                                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                                    Mom
-                                </figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="max-w-4xl mx-auto my-12 md:my-24 px-4">
-                    <h2
-                        id="about-me"
-                        className="text-5xl mb-6 font-title font-black tracking-wide"
-                    >
-                        About me
-                    </h2>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        Hi, I'm Camila and this is my story. I studied
-                        biochemistry in Chile, but one of my big dreams was to
-                        have the experience of living in a different country.
-                        For that I first went to Ireland to learn English and
-                        then I started a master's degree in biochemistry in
-                        Germany. My specialisation was in cell biology and I did
-                        my thesis on{' '}
-                        <a
-                            href="https://www.mdpi.com/2673-7140/4/1/1"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            how binge alcohol consumption affects adolescence
-                        </a>
-                        . Germany is very cool, but its climate not so much, so
-                        I moved to the south of France looking for more sun and
-                        beach when I had the chance.
-                    </p>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        Unfortunately it was not good for my career, I could not
-                        find a job because my area of work was very specialised.
-                        So I had two options, specialise in another area to stay
-                        in science or start something completely new. And here I
-                        am, I think you can figure out which way I went. It's
-                        been a very fun road, learning a lot of new things and
-                        it's just the beginning.
-                    </p>
-
-                    <h3 className="text-3xl mb-6 font-title font-black tracking-wide">
-                        Why web progamming?
-                    </h3>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        Two years ago I was told about a game to learn
-                        programming:{' '}
-                        <a
-                            href="https://codecombat.com/user/cararcel"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            Codecombat
-                        </a>
-                        . I started playing it for fun and learned a lot. I will
-                        definitely show it to my kids.
-                    </p>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        After that, I decided to take some courses. A friend
-                        told me about{' '}
-                        <a
-                            href="https://laracasts.com/"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            Laracasts
-                        </a>
-                        . I started watching some videos about HTML, CSS and
-                        PHP. Jeffrey Way explains very well, he makes you
-                        believe that everything is very simple. Then I started
-                        watching videos on{' '}
-                        <a
-                            href="https://grafikart.fr"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            Grafikart
-                        </a>{' '}
-                        to improve my french, here I did again HTML, CSS and
-                        continued with Javascript.
-                    </p>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        Making the decision to go back to school was difficult,
-                        but that I wanted to study was not so difficult. I
-                        already had some programming experience and thought it
-                        was fun and interesting. So I decided to take a web
-                        developer formation at{' '}
-                        <a
-                            href="https://openclassNamerooms.com/fr/paths/899-developpeur-web"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            OpenclassNamerooms
-                        </a>
-                        . Which I finished end of September 2024, since then I'm{' '}
-                        <a
-                            href="/assets/oc-certificat.pdf"
-                            title="my OpenclassNamerooms certificate"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            officially a Web Developper
-                        </a>
-                        .
-                    </p>
-
-                    <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-                        Since I finished my OpenclassNamerooms courses I'm
-                        mostly taking care of my child. But I'm also trying to
-                        take the time to continue to improve my new set of
-                        skills. I'm in the process of learning more about React
-                        through the{' '}
-                        <a
-                            href="https://www.epicreact.dev/"
-                            target="_blank"
-                            className="font-bold underline hover:no-underline"
-                        >
-                            Epic React
-                        </a>{' '}
-                        course.
-                    </p>
-
-                    <div className="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
-                        <span className="text-xl font-black">Find me on:</span>
-                        <div className="flex gap-4">
-                            <a
-                                title="Check the GitHub repository"
-                                className="font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-3 py-2 flex items-center gap-1"
-                                target="_blank"
-                                href="https://github.com/cararcel"
-                            >
-                                <svg
-                                    className="size-6 inline-block"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 496 512"
-                                >
-                                    <title>GitHub</title>
-                                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                </svg>
-                                <span className="text-lg">GitHub</span>
-                            </a>
-
-                            <a
-                                title="My LinkedIn profile"
-                                target="_blank"
-                                href="https://www.linkedin.com/in/arce-camila/"
-                                className="gap-1 text-white font-extrabold rounded-full bg-blue-600 shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-3 py-2 flex items-center"
-                            >
-                                <svg
-                                    className="inline-block size-6 fill-current stroke-current"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 448 512"
-                                >
-                                    <title>LinkedIn</title>
-                                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
-                                </svg>
-                                <span className="text-lg">LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="pb-24 px-4 max-w-4xl mx-auto">
-                    <h2
-                        id="projects"
-                        className="text-5xl mb-6 font-title font-black tracking-wide"
-                    >
-                        Projects
-                    </h2>
-
-                    <div className="grid grid-colds-1 md:grid-cols-2 gap-6">
-                        <div className="group card bg-white p-4">
-                            <div className="text-2xl font-black">Booki</div>
-
-                            <figure className="h-56 overflow-hidden m-2 border-pink-400 border rounded-sm">
-                                <div className="h-4 bg-pink-400 pl-1 gap-0.5 flex flex-start">
-                                    <div className="flex justify-start items-center gap-0.5">
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                    </div>
-                                </div>
-                                <img
-                                    loading="lazy"
-                                    className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                                    src="/assets/img/booki-desktop@366w.webp"
-                                    srcSet="/assets/img/booki-desktop@366w.webp 366w,
-                                /assets/img/booki-desktop@767w.webp 767w, 
-                                /assets/img/booki-desktop@600w.webp 600w,
-                                /assets/img/booki-desktop@500w.webp 500w,
-                                /assets/img/booki-desktop@289w.webp 289w"
-                                    sizes="(min-width: 768px) 366px,
-                                ((min-width: 687px) and (max-width: 767px)) 767px,
-                                ((min-width: 587px) and (max-width: 686px)) 600px,
-                                ((min-width: 376px) and (max-width: 586px)) 500px,
-                                (max-width: 375px) 289px"
-                                    alt="Screenshot of the Booki website"
-                                />
-                                <figcaption className="sr-only">
-                                    Screenshot of the Booki website
-                                </figcaption>
-                            </figure>
-
-                            <div className="flex flex-wrap gap-4">
-                                <a
-                                    title="Check the GitHub repository"
-                                    target="_blank"
-                                    className="font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1 flex items-center gap-1"
-                                    href="https://github.com/cararcel/oc-p2-booki"
-                                >
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 496 512"
-                                    >
-                                        <title>GitHub</title>
-                                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                    </svg>{' '}
-                                    <span className="hidden md:inline">
-                                        GitHub
-                                    </span>
-                                </a>
-
-                                <div className="font-extrabold rounded-lg bg-orange-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    HTML
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-blue-300 shadow-black-small border-2 border-black px-2 py-1">
-                                    CSS
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Color swatch</title>
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z"
-                                            clip-rule="evenodd"
-                                        />
-                                        <path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" />
-                                    </svg>
-                                    <span>Integration of a design</span>
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Mobile phone</title>
-                                        <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z"
-                                            clip-rule="evenodd"
-                                        />
-                                    </svg>
-                                    <span>Responsive design</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="group card bg-white p-4">
-                            <div className="text-2xl font-black">
-                                Nina Carducci
-                            </div>
-
-                            <figure className="h-56 overflow-hidden m-2 border-purple-400 border rounded-sm">
-                                <div className="h-4 bg-purple-400 pl-1 gap-0.5 flex flex-start">
-                                    <div className="flex justify-start items-center gap-0.5">
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                    </div>
-                                </div>
-                                <img
-                                    loading="lazy"
-                                    className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                                    src="/assets/img/nina-carducci-desktop@366w.webp"
-                                    srcSet="/assets/img/nina-carducci-desktop@366w.webp 366w,
-                                /assets/img/nina-carducci-desktop@767w.webp 767w, 
-                                /assets/img/nina-carducci-desktop@600w.webp 600w,
-                                /assets/img/nina-carducci-desktop@500w.webp 500w,
-                                /assets/img/nina-carducci-desktop@289w.webp 289w"
-                                    sizes="(min-width: 768px) 366px,
-                                ((min-width: 687px) and (max-width: 767px)) 681px,
-                                ((min-width: 587px) and (max-width: 686px)) 600px,
-                                ((min-width: 376px) and (max-width: 586px)) 500px,
-                                (max-width: 375px) 289px"
-                                    alt="Screenshot of the Nina Carducci website"
-                                />
-                                <figcaption className="sr-only">
-                                    Screenshot of the Nina Carducci website
-                                </figcaption>
-                            </figure>
-
-                            <div className="flex flex-wrap gap-4">
-                                <a
-                                    title="Check the GitHub repository"
-                                    target="_blank"
-                                    className="flex items-center gap-1 font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1"
-                                    href="https://github.com/cararcel/Nina-Carducci-Dev"
-                                >
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 496 512"
-                                    >
-                                        <title>GitHub</title>
-                                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                    </svg>
-                                    <span className="hidden md:inline">
-                                        GitHub
-                                    </span>
-                                </a>
-
-                                <div className="font-extrabold rounded-lg bg-orange-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    HTML
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-blue-300 shadow-black-small border-2 border-black px-2 py-1">
-                                    CSS
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-yellow-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    Javascript
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Bug</title>
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M8.478 1.6a.75.75 0 0 1 .273 1.026 3.72 3.72 0 0 0-.425 1.121c.058.058.118.114.18.168A4.491 4.491 0 0 1 12 2.25c1.413 0 2.673.651 3.497 1.668.06-.054.12-.11.178-.167a3.717 3.717 0 0 0-.426-1.125.75.75 0 1 1 1.298-.752 5.22 5.22 0 0 1 .671 2.046.75.75 0 0 1-.187.582c-.241.27-.505.52-.787.749a4.494 4.494 0 0 1 .216 2.1c-.106.792-.753 1.295-1.417 1.403-.182.03-.364.057-.547.081.152.227.273.476.359.742a23.122 23.122 0 0 0 3.832-.803 23.241 23.241 0 0 0-.345-2.634.75.75 0 0 1 1.474-.28c.21 1.115.348 2.256.404 3.418a.75.75 0 0 1-.516.75c-1.527.499-3.119.854-4.76 1.049-.074.38-.22.735-.423 1.05 2.066.209 4.058.672 5.943 1.358a.75.75 0 0 1 .492.75 24.665 24.665 0 0 1-1.189 6.25.75.75 0 0 1-1.425-.47 23.14 23.14 0 0 0 1.077-5.306c-.5-.169-1.009-.32-1.524-.455.068.234.104.484.104.746 0 3.956-2.521 7.5-6 7.5-3.478 0-6-3.544-6-7.5 0-.262.037-.511.104-.746-.514.135-1.022.286-1.522.455.154 1.838.52 3.616 1.077 5.307a.75.75 0 1 1-1.425.468 24.662 24.662 0 0 1-1.19-6.25.75.75 0 0 1 .493-.749 24.586 24.586 0 0 1 4.964-1.24h.01c.321-.046.644-.085.969-.118a2.983 2.983 0 0 1-.424-1.05 24.614 24.614 0 0 1-4.76-1.05.75.75 0 0 1-.516-.75c.057-1.16.194-2.302.405-3.417a.75.75 0 0 1 1.474.28c-.164.862-.28 1.74-.345 2.634 1.237.371 2.517.642 3.832.803.085-.266.207-.515.359-.742a18.698 18.698 0 0 1-.547-.08c-.664-.11-1.311-.612-1.417-1.404a4.535 4.535 0 0 1 .217-2.103 6.788 6.788 0 0 1-.788-.751.75.75 0 0 1-.187-.583 5.22 5.22 0 0 1 .67-2.04.75.75 0 0 1 1.026-.273Z"
-                                            clip-rule="evenodd"
-                                        />
-                                    </svg>
-
-                                    <span>Debugging</span>
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>World globe</title>
-                                        <path d="M21.721 12.752a9.711 9.711 0 0 0-.945-5.003 12.754 12.754 0 0 1-4.339 2.708 18.991 18.991 0 0 1-.214 4.772 17.165 17.165 0 0 0 5.498-2.477ZM14.634 15.55a17.324 17.324 0 0 0 .332-4.647c-.952.227-1.945.347-2.966.347-1.021 0-2.014-.12-2.966-.347a17.515 17.515 0 0 0 .332 4.647 17.385 17.385 0 0 0 5.268 0ZM9.772 17.119a18.963 18.963 0 0 0 4.456 0A17.182 17.182 0 0 1 12 21.724a17.18 17.18 0 0 1-2.228-4.605ZM7.777 15.23a18.87 18.87 0 0 1-.214-4.774 12.753 12.753 0 0 1-4.34-2.708 9.711 9.711 0 0 0-.944 5.004 17.165 17.165 0 0 0 5.498 2.477ZM21.356 14.752a9.765 9.765 0 0 1-7.478 6.817 18.64 18.64 0 0 0 1.988-4.718 18.627 18.627 0 0 0 5.49-2.098ZM2.644 14.752c1.682.971 3.53 1.688 5.49 2.099a18.64 18.64 0 0 0 1.988 4.718 9.765 9.765 0 0 1-7.478-6.816ZM13.878 2.43a9.755 9.755 0 0 1 6.116 3.986 11.267 11.267 0 0 1-3.746 2.504 18.63 18.63 0 0 0-2.37-6.49ZM12 2.276a17.152 17.152 0 0 1 2.805 7.121c-.897.23-1.837.353-2.805.353-.968 0-1.908-.122-2.805-.353A17.151 17.151 0 0 1 12 2.276ZM10.122 2.43a18.629 18.629 0 0 0-2.37 6.49 11.266 11.266 0 0 1-3.746-2.504 9.754 9.754 0 0 1 6.116-3.985Z" />
-                                    </svg>
-
-                                    <span>SEO</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="group card bg-white p-4">
-                            <div className="text-2xl font-black">Kasa</div>
-
-                            <figure className="h-56 overflow-hidden m-2 border-orange-400 border rounded-sm">
-                                <div className="h-4 bg-orange-400 pl-1 gap-0.5 flex flex-start">
-                                    <div className="flex justify-start items-center gap-0.5">
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                    </div>
-                                </div>
-                                <img
-                                    loading="lazy"
-                                    className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                                    src="/assets/img/kasa-desktop@366w.webp"
-                                    srcSet="/assets/img/kasa-desktop@366w.webp 366w,
-                                /assets/img/kasa-desktop@767w.webp 767w, 
-                                /assets/img/kasa-desktop@600w.webp 600w,
-                                /assets/img/kasa-desktop@500w.webp 500w,
-                                /assets/img/kasa-desktop@289w.webp 289w"
-                                    sizes="(min-width: 768px) 366px,
-                                ((min-width: 687px) and (max-width: 767px)) 681px,
-                                ((min-width: 587px) and (max-width: 686px)) 600px,
-                                ((min-width: 376px) and (max-width: 586px)) 500px,
-                                (max-width: 375px) 289px"
-                                    alt="Screenshot of the Kasa website"
-                                />
-                                <figcaption className="sr-only">
-                                    Screenshot of the Kasa website
-                                </figcaption>
-                            </figure>
-
-                            <div className="flex flex-wrap gap-4">
-                                <a
-                                    title="Check the GitHub repository"
-                                    target="_blank"
-                                    className="flex items-center gap-1 font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1"
-                                    href="https://github.com/cararcel/kasa-oc-p5"
-                                >
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 496 512"
-                                    >
-                                        <title>GitHub</title>
-                                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                    </svg>
-                                    <span className="hidden md:inline">
-                                        GitHub
-                                    </span>
-                                </a>
-
-                                <div className="font-extrabold rounded-lg bg-blue-300 shadow-black-small border-2 border-black px-2 py-1">
-                                    ReactJS
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-pink-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    SCSS
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Color swatch</title>
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z"
-                                            clip-rule="evenodd"
-                                        />
-                                        <path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" />
-                                    </svg>
-                                    <span>Integration of a design</span>
-                                </div>
-
-                                <div className="flex items-center gap-1  font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Mobile phone</title>
-                                        <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z"
-                                            clip-rule="evenodd"
-                                        />
-                                    </svg>
-                                    <span>Responsive design</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="group card bg-white p-4">
-                            <div className="text-2xl font-black">
-                                Sophie Bluel
-                            </div>
-
-                            <figure className="h-56 overflow-hidden m-2 border-green-400 border rounded-sm">
-                                <div className="h-4 bg-green-400 pl-1 gap-0.5 flex flex-start">
-                                    <div className="flex justify-start items-center gap-0.5">
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                        <div className="rounded-full bg-gray-200 size-1"></div>
-                                    </div>
-                                </div>
-                                <img
-                                    loading="lazy"
-                                    className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                                    src="/assets/img/sophie-bluel-desktop@366w.webp"
-                                    srcSet="/assets/img/sophie-bluel-desktop@366w.webp 366w,
-                                /assets/img/sophie-bluel-desktop@767w.webp 767w, 
-                                /assets/img/sophie-bluel-desktop@600w.webp 600w,
-                                /assets/img/sophie-bluel-desktop@500w.webp 500w,
-                                /assets/img/sophie-bluel-desktop@289w.webp 289w"
-                                    sizes="(min-width: 768px) 366px,
-                                ((min-width: 687px) and (max-width: 767px)) 681px,
-                                ((min-width: 587px) and (max-width: 686px)) 600px,
-                                ((min-width: 376px) and (max-width: 586px)) 500px,
-                                (max-width: 375px) 289px"
-                                    alt="Screenshot of the Sophie Bluel website"
-                                />
-                                <figcaption className="sr-only">
-                                    Screenshot of the Sophie Bluel website
-                                </figcaption>
-                            </figure>
-
-                            <div className="flex flex-wrap gap-4">
-                                <a
-                                    title="Check the GitHub repository"
-                                    target="_blank"
-                                    className="flex items-center gap-1 font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1"
-                                    href="https://github.com"
-                                >
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 496 512"
-                                    >
-                                        <title>GitHub</title>
-                                        <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                                    </svg>
-                                    <span className="hidden md:inline">
-                                        GitHub
-                                    </span>
-                                </a>
-
-                                <div className="font-extrabold rounded-lg bg-blue-300 shadow-black-small border-2 border-black px-2 py-1">
-                                    HTML
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-orange-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    CSS
-                                </div>
-
-                                <div className="font-extrabold rounded-lg bg-yellow-400 shadow-black-small border-2 border-black px-2 py-1">
-                                    JavaScript
-                                </div>
-
-                                <div className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2 border-black px-2 py-1">
-                                    <svg
-                                        className="size-5"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="currentColor"
-                                    >
-                                        <title>Color swatch</title>
-                                        <path
-                                            fill-rule="evenodd"
-                                            d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 1 1-9 0V4.125Zm4.5 14.25a1.125 1.125 0 1 0 0-2.25 1.125 1.125 0 0 0 0 2.25Z"
-                                            clip-rule="evenodd"
-                                        />
-                                        <path d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257ZM12.738 17.625l6.474-6.474a1.875 1.875 0 0 0 0-2.651L15.5 4.787a1.875 1.875 0 0 0-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375Z" />
-                                    </svg>
-                                    <span>Integration of a design</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <footer className="max-w-4xl mx-auto my-10">
-                <div
-                    className="w-full bg-blue-300 flex flex-wrap justify-center gap-4 items-center
-                card p-4 font-black tracking-wider"
-                >
-                    <span>
-                        Copyright &copy; <time dateTime="2024">2024</time>
-                    </span>
-
-                    <a
-                        title="Edit the page on GitHub"
-                        className="font-extrabold rounded-full bg-white shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black px-2 py-1 flex items-center gap-1"
-                        target="_blank"
-                        href="https://github.com/cararcel/camiarce.dev/blob/main/index.html"
-                    >
-                        <svg
-                            className="size-6 inline-block"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 496 512"
-                        >
-                            <title>GitHub</title>
-                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg>
-                        <span className="text-lg">Edit on GitHub</span>
-                    </a>
+              <div className="animate-scale duration-100 transition absolute -top-16 right-3 starburst border-1 border-black w-28 md:w-36 bg-green-400">
+                <div className="flex justify-center items-center h-full w-full font-handwritten font-black text-lg md:text-xl text-center -rotate-12">
+                  Available
+                  <br />
+                  to work
                 </div>
-            </footer>
+              </div>
+            </Card>
+            <div className="col-span-2 grid gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-6">
+                <span className="flex w-full justify-center items-center font-title text-4xl sm:text-3xl">
+                  I speak
+                </span>
 
-            <div className="mt-96 font-handwritten text-xl font-black text-center">
-                Why are you still scrolling?
-            </div>
+                <div>
+                  <Link
+                    title="Switch to Spanish"
+                    className=" bg-white hover:bg-red-500 hover:text-white px-3 py-2"
+                    target="_self"
+                    href="/es"
+                    icon={<span className="text-lg">🇨🇱</span>}
+                    label="Español"
+                  />
+                </div>
 
-            <div className="mt-96 font-handwritten text-xl font-black text-center">
-                There's nothing more... Please stop scrolling.
-            </div>
+                <div>
+                  <Link
+                    title="Switch to English"
+                    className=" bg-white hover:bg-red-500 hover:text-white px-3 py-2 "
+                    target="_self"
+                    href="/"
+                    icon={<span className="text-lg">🇬🇧</span>}
+                    label="English"
+                  />
+                </div>
 
-            <div className="mt-96 font-handwritten text-xl font-black text-center">
-                I'm warning you. Stop scrolling.
+                <div>
+                  <Link
+                    title="Switch to French"
+                    className=" bg-white hover:bg-red-500 hover:text-white px-3 py-2"
+                    target="_self"
+                    href="/"
+                    icon={<span className="text-lg">🇫🇷</span>}
+                    label="Français"
+                  />
+                </div>
+              </div>
             </div>
+            <Card className="group bg-pink-400">
+              <figure className="w-full flex justify-center flex-col">
+                <div className="flex justify-around items-end h-10 m-4">
+                  <img
+                    className="group-hover:animate-spin h-24"
+                    src="/assets/img/laptop.webp"
+                    srcSet="/assets/img/laptop.webp, /assets/img/laptop@2x.webp 2x"
+                    alt="My laptop"
+                  />
+                </div>
+                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
+                  Web developer
+                </figcaption>
+              </figure>
+            </Card>
 
-            <div className="mt-96 font-handwritten text-xl font-black text-center">
-                I did warn you. This is on you.
-            </div>
+            <Card className="group bg-green-300">
+              <figure className="w-full h-full flex justify-center flex-col">
+                <div className="flex justify-around items-end h-10 m-4">
+                  <img
+                    className="group-hover:animate-spin h-24"
+                    src="/assets/img/microscope.webp"
+                    srcSet="/assets/img/microscope.webp, /assets/img/microscope@2x.webp 2x"
+                    alt="One of my microscope"
+                  />
+                </div>
+                <figcaption className="flex-shrink w-full h-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
+                  Biochemist
+                </figcaption>
+              </figure>
+            </Card>
 
-            <div className="mt-96 mb-16 mx-auto">
-                <figure className="p-4 md:p-0">
-                    <img
-                        className="card"
-                        loading="lazy"
-                        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhyajFxY291dmd0NzZrZ2Y2dWw3MHoyN2lhbXRrbHNtOXAzb3l0ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5kq0GCjHA8Rwc/giphy.webp"
-                        alt=""
-                    />
-                    <figcaption className="mt-2 font-handwritten text-xl">
-                        Never gonna give you up...
-                    </figcaption>
-                </figure>
+            <Card className="group bg-orange-400">
+              <figure className="w-full flex justify-center flex-col">
+                <div className="flex justify-around items-end h-10 m-4">
+                  <img
+                    className="group-hover:animate-spin h-24"
+                    src="/assets/img/conito.webp"
+                    srcSet="/assets/img/conito.webp, /assets/img/conito@2x.webp 2x"
+                    alt="A picture of one of my cats"
+                  />
+                  <img
+                    className="group-hover:animate-spin h-24"
+                    src="/assets/img/lilith.webp"
+                    srcSet="/assets/img/lilith.webp, /assets/img/lilith@2x.webp 2x"
+                    alt="A picture of my other cat"
+                  />
+                </div>
+                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-semibold font-subtitle tracking-wider border-t-2 border-black p-2">
+                  Cat mom
+                </figcaption>
+              </figure>
+            </Card>
+
+            <Card className="group bg-purple-400">
+              <figure className="w-full flex justify-center flex-col">
+                <div className="flex justify-around items-end h-10 m-4">
+                  <img
+                    className="group-hover:animate-spin h-24"
+                    src="/assets/img/baby-bottle.webp"
+                    srcSet="/assets/img/baby-bottle.webp, /assets/img/baby-bottle@2x.webp 2x"
+                    alt="A baby bottle"
+                  />
+                </div>
+                <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
+                  Mom
+                </figcaption>
+              </figure>
+            </Card>
+          </div>
+        </section>
+
+        <section className="max-w-4xl mx-auto my-12 md:my-24 px-4">
+          <h2
+            id="about-me"
+            className="text-5xl mb-6 font-title font-black tracking-wide"
+          >
+            About me
+          </h2>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Hi, I'm Camila and this is my story. I studied biochemistry in
+            Chile, but one of my big dreams was to have the experience of living
+            in a different country. For that I first went to Ireland to learn
+            English and then I started a master's degree in biochemistry in
+            Germany. My specialisation was in cell biology and I did my thesis
+            on{" "}
+            <a
+              href="https://www.mdpi.com/2673-7140/4/1/1"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              how binge alcohol consumption affects adolescence
+            </a>
+            . Germany is very cool, but its climate not so much, so I moved to
+            the south of France looking for more sun and beach when I had the
+            chance.
+          </p>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Unfortunately it was not good for my career, I could not find a job
+            because my area of work was very specialised. So I had two options,
+            specialise in another area to stay in science or start something
+            completely new. And here I am, I think you can figure out which way
+            I went. It's been a very fun road, learning a lot of new things and
+            it's just the beginning.
+          </p>
+
+          <h3 className="text-3xl mb-6 font-title font-black tracking-wide">
+            Why web progamming?
+          </h3>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Two years ago I was told about a game to learn programming:{" "}
+            <a
+              href="https://codecombat.com/user/cararcel"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              Codecombat
+            </a>
+            . I started playing it for fun and learned a lot. I will definitely
+            show it to my kids.
+          </p>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            After that, I decided to take some courses. A friend told me about{" "}
+            <a
+              href="https://laracasts.com/"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              Laracasts
+            </a>
+            . I started watching some videos about HTML, CSS and PHP. Jeffrey
+            Way explains very well, he makes you believe that everything is very
+            simple. Then I started watching videos on{" "}
+            <a
+              href="https://grafikart.fr"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              Grafikart
+            </a>{" "}
+            to improve my french, here I did again HTML, CSS and continued with
+            Javascript.
+          </p>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Making the decision to go back to school was difficult, but that I
+            wanted to study was not so difficult. I already had some programming
+            experience and thought it was fun and interesting. So I decided to
+            take a web developer formation at{" "}
+            <a
+              href="https://openclassNamerooms.com/fr/paths/899-developpeur-web"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              OpenclassNamerooms
+            </a>
+            . Which I finished end of September 2024, since then I'm{" "}
+            <a
+              href="/assets/oc-certificat.pdf"
+              title="my OpenclassNamerooms certificate"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              officially a Web Developper
+            </a>
+            .
+          </p>
+
+          <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Since I finished my OpenclassNamerooms courses I'm mostly taking
+            care of my child. But I'm also trying to take the time to continue
+            to improve my new set of skills. I'm in the process of learning more
+            about React through the{" "}
+            <a
+              href="https://www.epicreact.dev/"
+              target="_blank"
+              className="font-bold underline hover:no-underline"
+            >
+              Epic React
+            </a>{" "}
+            course.
+          </p>
+
+          <div className="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+            <span className="text-xl font-black">Find me on:</span>
+            <div className="flex gap-4">
+              <Link
+                title="Check the GitHub repository"
+                className=" bg-white px-3 py-2"
+                target="_blank"
+                href="https://github.com/cararcel"
+                icon={<GitHub className="size-6" />}
+                label="GitHub"
+              />
+              <Link
+                title="My LinkedIn profile"
+                className=" bg-blue-600 text-white px-3 py-2"
+                target="_blank"
+                href="https://www.linkedin.com/in/arce-camila/"
+                icon={<LinkedIn className="size-6 fill-current" />}
+                label="LinkedIn"
+              />
             </div>
-        </>
-    );
+          </div>
+        </section>
+
+        <section className="pb-24 px-4 max-w-4xl mx-auto">
+          <h2
+            id="projects"
+            className="text-5xl mb-6 font-title font-black tracking-wide"
+          >
+            Projects
+          </h2>
+
+          <div className="grid grid-colds-1 md:grid-cols-2 gap-6">
+            <Card className="group bg-white p-4">
+              <div className="text-2xl font-black">Booki</div>
+
+              <figure className="h-56 overflow-hidden m-2 border-pink-400 border rounded-sm">
+                <div className="h-4 bg-pink-400 pl-1 gap-0.5 flex flex-start">
+                  <div className="flex justify-start items-center gap-0.5">
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                  </div>
+                </div>
+                <img
+                  loading="lazy"
+                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
+                  src="/assets/img/booki-desktop@366w.webp"
+                  srcSet="/assets/img/booki-desktop@366w.webp 366w,
+                /assets/img/booki-desktop@767w.webp 767w, 
+                /assets/img/booki-desktop@600w.webp 600w,
+                /assets/img/booki-desktop@500w.webp 500w,
+                /assets/img/booki-desktop@289w.webp 289w"
+                  sizes="(min-width: 768px) 366px,
+                ((min-width: 687px) and (max-width: 767px)) 767px,
+                ((min-width: 587px) and (max-width: 686px)) 600px,
+                ((min-width: 376px) and (max-width: 586px)) 500px,
+                (max-width: 375px) 289px"
+                  alt="Screenshot of the Booki website"
+                />
+                <figcaption className="sr-only">
+                  Screenshot of the Booki website
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  title="Check the GitHub repository"
+                  className=" bg-white px-2 py-1"
+                  target="_blank"
+                  href="https://github.com/cararcel/oc-p2-booki"
+                  icon={<GitHub className="size-5" />}
+                  label="GitHub"
+                />
+                <Tag className="bg-orange-400" label="HTML" />
+                <Tag className="bg-blue-300" label="CSS" />
+                <Tag
+                  label="Integration of a design"
+                  icon={<ColorSwatch className="size-5" />}
+                />
+                <Tag
+                  label="Responisve design"
+                  icon={<MobilePhone className="size-5" />}
+                />
+              </div>
+            </Card>
+
+            <Card className="group bg-white p-4">
+              <div className="text-2xl font-black">Nina Carducci</div>
+
+              <figure className="h-56 overflow-hidden m-2 border-purple-400 border rounded-sm">
+                <div className="h-4 bg-purple-400 pl-1 gap-0.5 flex flex-start">
+                  <div className="flex justify-start items-center gap-0.5">
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                  </div>
+                </div>
+                <img
+                  loading="lazy"
+                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
+                  src="/assets/img/nina-carducci-desktop@366w.webp"
+                  srcSet="/assets/img/nina-carducci-desktop@366w.webp 366w,
+                /assets/img/nina-carducci-desktop@767w.webp 767w, 
+                /assets/img/nina-carducci-desktop@600w.webp 600w,
+                /assets/img/nina-carducci-desktop@500w.webp 500w,
+                /assets/img/nina-carducci-desktop@289w.webp 289w"
+                  sizes="(min-width: 768px) 366px,
+                ((min-width: 687px) and (max-width: 767px)) 681px,
+                ((min-width: 587px) and (max-width: 686px)) 600px,
+                ((min-width: 376px) and (max-width: 586px)) 500px,
+                (max-width: 375px) 289px"
+                  alt="Screenshot of the Nina Carducci website"
+                />
+                <figcaption className="sr-only">
+                  Screenshot of the Nina Carducci website
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  title="Check the GitHub repository"
+                  className=" bg-white px-2 py-1"
+                  target="_blank"
+                  href="https://github.com/cararcel/Nina-Carducci-Dev"
+                  icon={<GitHub className="size-5" />}
+                  label="GitHub"
+                />
+                <Tag className="bg-orange-400" label="HTML" />
+                <Tag className="bg-blue-300" label="CSS" />
+                <Tag className="bg-yellow-400" label="Javascript" />
+                <Tag
+                  label="Debugging"
+                  icon={<Debugging className="size-5" />}
+                />
+                <Tag label="SEO" icon={<Seo className="size-5" />} />
+              </div>
+            </Card>
+
+            <Card className="group bg-white p-4">
+              <div className="text-2xl font-black">Kasa</div>
+
+              <figure className="h-56 overflow-hidden m-2 border-orange-400 border rounded-sm">
+                <div className="h-4 bg-orange-400 pl-1 gap-0.5 flex flex-start">
+                  <div className="flex justify-start items-center gap-0.5">
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                  </div>
+                </div>
+                <img
+                  loading="lazy"
+                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
+                  src="/assets/img/kasa-desktop@366w.webp"
+                  srcSet="/assets/img/kasa-desktop@366w.webp 366w,
+                /assets/img/kasa-desktop@767w.webp 767w, 
+                /assets/img/kasa-desktop@600w.webp 600w,
+                /assets/img/kasa-desktop@500w.webp 500w,
+                /assets/img/kasa-desktop@289w.webp 289w"
+                  sizes="(min-width: 768px) 366px,
+                ((min-width: 687px) and (max-width: 767px)) 681px,
+                ((min-width: 587px) and (max-width: 686px)) 600px,
+                ((min-width: 376px) and (max-width: 586px)) 500px,
+                (max-width: 375px) 289px"
+                  alt="Screenshot of the Kasa website"
+                />
+                <figcaption className="sr-only">
+                  Screenshot of the Kasa website
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  title="Check the GitHub repository"
+                  className=" bg-white px-2 py-1"
+                  target="_blank"
+                  href="https://github.com/cararcel/kasa-oc-p5"
+                  icon={<GitHub className="size-5" />}
+                  label="GitHub"
+                />
+                <Tag className="bg-blue-300">ReactJS</Tag>
+                <Tag className="bg-pink-400">SCSS</Tag>
+                <Tag
+                  label="Integration of a design"
+                  icon={<ColorSwatch className="size-5" />}
+                />
+                <Tag
+                  label="Responisve design"
+                  icon={<MobilePhone className="size-5" />}
+                />
+              </div>
+            </Card>
+
+            <Card className="group bg-white p-4">
+              <div className="text-2xl font-black">Sophie Bluel</div>
+
+              <figure className="h-56 overflow-hidden m-2 border-green-400 border rounded-sm">
+                <div className="h-4 bg-green-400 pl-1 gap-0.5 flex flex-start">
+                  <div className="flex justify-start items-center gap-0.5">
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                    <div className="rounded-full bg-gray-200 size-1"></div>
+                  </div>
+                </div>
+                <img
+                  loading="lazy"
+                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
+                  src="/assets/img/sophie-bluel-desktop@366w.webp"
+                  srcSet="/assets/img/sophie-bluel-desktop@366w.webp 366w,
+                /assets/img/sophie-bluel-desktop@767w.webp 767w, 
+                /assets/img/sophie-bluel-desktop@600w.webp 600w,
+                /assets/img/sophie-bluel-desktop@500w.webp 500w,
+                /assets/img/sophie-bluel-desktop@289w.webp 289w"
+                  sizes="(min-width: 768px) 366px,
+                ((min-width: 687px) and (max-width: 767px)) 681px,
+                ((min-width: 587px) and (max-width: 686px)) 600px,
+                ((min-width: 376px) and (max-width: 586px)) 500px,
+                (max-width: 375px) 289px"
+                  alt="Screenshot of the Sophie Bluel website"
+                />
+                <figcaption className="sr-only">
+                  Screenshot of the Sophie Bluel website
+                </figcaption>
+              </figure>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  title="Check the GitHub repository"
+                  className=" bg-white px-2 py-1"
+                  target="_blank"
+                  href="https://github.com/cararcel/oc-p3-portfolio-architecte-sophie-bluel"
+                  icon={<GitHub className="size-5" />}
+                  label="GitHub"
+                />
+                <Tag className="bg-blue-300">HTML</Tag>
+                <Tag className="bg-orange-400">CSS</Tag>
+                <Tag className="bg-yellow-400">JavaScript</Tag>
+                <Tag
+                  label="Integration of a design"
+                  icon={<ColorSwatch className="size-5" />}
+                />
+              </div>
+            </Card>
+          </div>
+        </section>
+      </main>
+
+      <footer className="max-w-4xl mx-auto my-10">
+        <Card className="w-full bg-blue-300 flex flex-wrap justify-center gap-4 items-center p-4 font-black tracking-wider">
+          <span>
+            Copyright &copy; <time dateTime="2024">2024</time>
+          </span>
+          <Link
+            title="Edit the page on GitHub"
+            className=" bg-white px-2 py-1"
+            target="_blank"
+            href="https://github.com/cararcel/camiarce.dev/blob/main/index.html"
+            icon={<GitHub className="size-6" />}
+            label="Edit on GitHub"
+          />
+        </Card>
+      </footer>
+
+      <div className="mt-96 font-handwritten text-xl font-black text-center">
+        Why are you still scrolling?
+      </div>
+
+      <div className="mt-96 font-handwritten text-xl font-black text-center">
+        There's nothing more... Please stop scrolling.
+      </div>
+
+      <div className="mt-96 font-handwritten text-xl font-black text-center">
+        I'm warning you. Stop scrolling.
+      </div>
+
+      <div className="mt-96 font-handwritten text-xl font-black text-center">
+        I did warn you. This is on you.
+      </div>
+
+      <div className="mt-96 mb-16 flex justify-center w-full">
+        <figure className="p-4 md:p-0">
+          <img
+            className="card"
+            loading="lazy"
+            src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExejhyajFxY291dmd0NzZrZ2Y2dWw3MHoyN2lhbXRrbHNtOXAzb3l0ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5kq0GCjHA8Rwc/giphy.webp"
+            alt=""
+          />
+          <figcaption className="mt-2 font-handwritten text-xl">
+            Never gonna give you up...
+          </figcaption>
+        </figure>
+      </div>
+    </>
+  );
 }
 
 export default App;

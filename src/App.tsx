@@ -1,13 +1,14 @@
 import "react";
-import Card from "./assets/components/Card";
-import Link from "./assets/components/Link";
-import LinkedIn from "./assets/components/icons/linkedIn";
-import GitHub from "./assets/components/icons/github";
-import Tag from "./assets/components/Tag";
-import ColorSwatch from "./assets/components/icons/ColorSwatch";
-import MobilePhone from "./assets/components/icons/MobilePhone";
-import Debugging from "./assets/components/icons/Debugging";
-import Seo from "./assets/components/icons/Seo";
+import Card from "./components/Card";
+import Link from "./components/Link";
+import LinkedIn from "./components/icons/LinkedIn";
+import GitHub from "./components/icons/Github";
+import Tag from "./components/Tag";
+import ColorSwatch from "./components/icons/ColorSwatch";
+import MobilePhone from "./components/icons/MobilePhone";
+import Debugging from "./components/icons/Debugging";
+import Seo from "./components/icons/Seo";
+import Project from "./components/Project";
 
 function App() {
   return (
@@ -319,216 +320,73 @@ function App() {
           </h2>
 
           <div className="grid grid-colds-1 md:grid-cols-2 gap-6">
-            <Card className="group bg-white p-4">
-              <div className="text-2xl font-black">Booki</div>
-
-              <figure className="h-56 overflow-hidden m-2 border-pink-400 border rounded-sm">
-                <div className="h-4 bg-pink-400 pl-1 gap-0.5 flex flex-start">
-                  <div className="flex justify-start items-center gap-0.5">
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                  </div>
-                </div>
-                <img
-                  loading="lazy"
-                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                  src="/assets/img/booki-desktop@366w.webp"
-                  srcSet="/assets/img/booki-desktop@366w.webp 366w,
-                /assets/img/booki-desktop@767w.webp 767w, 
-                /assets/img/booki-desktop@600w.webp 600w,
-                /assets/img/booki-desktop@500w.webp 500w,
-                /assets/img/booki-desktop@289w.webp 289w"
-                  sizes="(min-width: 768px) 366px,
-                ((min-width: 687px) and (max-width: 767px)) 767px,
-                ((min-width: 587px) and (max-width: 686px)) 600px,
-                ((min-width: 376px) and (max-width: 586px)) 500px,
-                (max-width: 375px) 289px"
-                  alt="Screenshot of the Booki website"
-                />
-                <figcaption className="sr-only">
-                  Screenshot of the Booki website
-                </figcaption>
-              </figure>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  title="Check the GitHub repository"
-                  className=" bg-white px-2 py-1"
-                  target="_blank"
-                  href="https://github.com/cararcel/oc-p2-booki"
-                  icon={<GitHub className="size-5" />}
-                  label="GitHub"
-                />
-                <Tag className="bg-orange-400" label="HTML" />
-                <Tag className="bg-blue-300" label="CSS" />
+            <Project
+              name="Booki"
+              imgName="booki"
+              githubUrl="https://github.com/cararcel/oc-p2-booki"
+              tags={[
+                <Tag className="bg-orange-400" label="HTML" />,
+                <Tag className="bg-blue-300" label="CSS" />,
                 <Tag
                   label="Integration of a design"
                   icon={<ColorSwatch className="size-5" />}
-                />
+                />,
                 <Tag
                   label="Responisve design"
                   icon={<MobilePhone className="size-5" />}
-                />
-              </div>
-            </Card>
-
-            <Card className="group bg-white p-4">
-              <div className="text-2xl font-black">Nina Carducci</div>
-
-              <figure className="h-56 overflow-hidden m-2 border-purple-400 border rounded-sm">
-                <div className="h-4 bg-purple-400 pl-1 gap-0.5 flex flex-start">
-                  <div className="flex justify-start items-center gap-0.5">
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                  </div>
-                </div>
-                <img
-                  loading="lazy"
-                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                  src="/assets/img/nina-carducci-desktop@366w.webp"
-                  srcSet="/assets/img/nina-carducci-desktop@366w.webp 366w,
-                /assets/img/nina-carducci-desktop@767w.webp 767w, 
-                /assets/img/nina-carducci-desktop@600w.webp 600w,
-                /assets/img/nina-carducci-desktop@500w.webp 500w,
-                /assets/img/nina-carducci-desktop@289w.webp 289w"
-                  sizes="(min-width: 768px) 366px,
-                ((min-width: 687px) and (max-width: 767px)) 681px,
-                ((min-width: 587px) and (max-width: 686px)) 600px,
-                ((min-width: 376px) and (max-width: 586px)) 500px,
-                (max-width: 375px) 289px"
-                  alt="Screenshot of the Nina Carducci website"
-                />
-                <figcaption className="sr-only">
-                  Screenshot of the Nina Carducci website
-                </figcaption>
-              </figure>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  title="Check the GitHub repository"
-                  className=" bg-white px-2 py-1"
-                  target="_blank"
-                  href="https://github.com/cararcel/Nina-Carducci-Dev"
-                  icon={<GitHub className="size-5" />}
-                  label="GitHub"
-                />
-                <Tag className="bg-orange-400" label="HTML" />
-                <Tag className="bg-blue-300" label="CSS" />
-                <Tag className="bg-yellow-400" label="Javascript" />
+                />,
+              ]}
+              className="border-pink-400 bg-pink-400"
+            />
+            <Project
+              name="Nina Carducci"
+              imgName="nina-carducci"
+              githubUrl="https://github.com/cararcel/Nina-Carducci-Dev"
+              tags={[
+                <Tag className="bg-orange-400" label="HTML" />,
+                <Tag className="bg-blue-300" label="CSS" />,
+                <Tag className="bg-yellow-400" label="Javascript" />,
                 <Tag
                   label="Debugging"
                   icon={<Debugging className="size-5" />}
-                />
-                <Tag label="SEO" icon={<Seo className="size-5" />} />
-              </div>
-            </Card>
-
-            <Card className="group bg-white p-4">
-              <div className="text-2xl font-black">Kasa</div>
-
-              <figure className="h-56 overflow-hidden m-2 border-orange-400 border rounded-sm">
-                <div className="h-4 bg-orange-400 pl-1 gap-0.5 flex flex-start">
-                  <div className="flex justify-start items-center gap-0.5">
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                  </div>
-                </div>
-                <img
-                  loading="lazy"
-                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                  src="/assets/img/kasa-desktop@366w.webp"
-                  srcSet="/assets/img/kasa-desktop@366w.webp 366w,
-                /assets/img/kasa-desktop@767w.webp 767w, 
-                /assets/img/kasa-desktop@600w.webp 600w,
-                /assets/img/kasa-desktop@500w.webp 500w,
-                /assets/img/kasa-desktop@289w.webp 289w"
-                  sizes="(min-width: 768px) 366px,
-                ((min-width: 687px) and (max-width: 767px)) 681px,
-                ((min-width: 587px) and (max-width: 686px)) 600px,
-                ((min-width: 376px) and (max-width: 586px)) 500px,
-                (max-width: 375px) 289px"
-                  alt="Screenshot of the Kasa website"
-                />
-                <figcaption className="sr-only">
-                  Screenshot of the Kasa website
-                </figcaption>
-              </figure>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  title="Check the GitHub repository"
-                  className=" bg-white px-2 py-1"
-                  target="_blank"
-                  href="https://github.com/cararcel/kasa-oc-p5"
-                  icon={<GitHub className="size-5" />}
-                  label="GitHub"
-                />
-                <Tag className="bg-blue-300">ReactJS</Tag>
-                <Tag className="bg-pink-400">SCSS</Tag>
+                />,
+                <Tag label="SEO" icon={<Seo className="size-5" />} />,
+              ]}
+              className="border-purple-400 bg-purple-400"
+            />
+            <Project
+              name="Kasa"
+              imgName="kasa"
+              githubUrl="https://github.com/cararcel/kasa-oc-p5"
+              tags={[
+                <Tag className="bg-blue-300" label="ReactJS" />,
+                <Tag className="bg-pink-400" label="SCSS" />,
                 <Tag
                   label="Integration of a design"
                   icon={<ColorSwatch className="size-5" />}
-                />
+                />,
                 <Tag
                   label="Responisve design"
                   icon={<MobilePhone className="size-5" />}
-                />
-              </div>
-            </Card>
-
-            <Card className="group bg-white p-4">
-              <div className="text-2xl font-black">Sophie Bluel</div>
-
-              <figure className="h-56 overflow-hidden m-2 border-green-400 border rounded-sm">
-                <div className="h-4 bg-green-400 pl-1 gap-0.5 flex flex-start">
-                  <div className="flex justify-start items-center gap-0.5">
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                    <div className="rounded-full bg-gray-200 size-1"></div>
-                  </div>
-                </div>
-                <img
-                  loading="lazy"
-                  className="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
-                  src="/assets/img/sophie-bluel-desktop@366w.webp"
-                  srcSet="/assets/img/sophie-bluel-desktop@366w.webp 366w,
-                /assets/img/sophie-bluel-desktop@767w.webp 767w, 
-                /assets/img/sophie-bluel-desktop@600w.webp 600w,
-                /assets/img/sophie-bluel-desktop@500w.webp 500w,
-                /assets/img/sophie-bluel-desktop@289w.webp 289w"
-                  sizes="(min-width: 768px) 366px,
-                ((min-width: 687px) and (max-width: 767px)) 681px,
-                ((min-width: 587px) and (max-width: 686px)) 600px,
-                ((min-width: 376px) and (max-width: 586px)) 500px,
-                (max-width: 375px) 289px"
-                  alt="Screenshot of the Sophie Bluel website"
-                />
-                <figcaption className="sr-only">
-                  Screenshot of the Sophie Bluel website
-                </figcaption>
-              </figure>
-
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  title="Check the GitHub repository"
-                  className=" bg-white px-2 py-1"
-                  target="_blank"
-                  href="https://github.com/cararcel/oc-p3-portfolio-architecte-sophie-bluel"
-                  icon={<GitHub className="size-5" />}
-                  label="GitHub"
-                />
-                <Tag className="bg-blue-300">HTML</Tag>
-                <Tag className="bg-orange-400">CSS</Tag>
-                <Tag className="bg-yellow-400">JavaScript</Tag>
+                />,
+              ]}
+              className="border-orange-400 bg-orange-400"
+            />
+            <Project
+              name="Sophie Bluel"
+              imgName="sophie-bluel"
+              githubUrl="https://github.com/cararcel/oc-p3-portfolio-architecte-sophie-bluel"
+              tags={[
+                <Tag className="bg-blue-300" label="HTML" />,
+                <Tag className="bg-orange-400" label="CSS" />,
+                <Tag className="bg-yellow-400" label="JavaScript" />,
                 <Tag
                   label="Integration of a design"
                   icon={<ColorSwatch className="size-5" />}
-                />
-              </div>
-            </Card>
+                />,
+              ]}
+              className="border-green-400 bg-green-400"
+            />
           </div>
         </section>
       </main>

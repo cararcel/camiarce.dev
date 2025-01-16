@@ -1,31 +1,42 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-    theme: {
-        extend: {
-            boxShadow: {
-                'black-small': '2px 3px 0 0 rgba(0, 0, 0, 1)',
-                'black-small-raised': '6px 6px 0 0 rgba(0, 0, 0, 1)',
-                black: '4px 6px 0 0 rgba(0, 0, 0, 1)',
-                'black-raised': '10px 10px 0 0 rgba(0, 0, 0, 1)',
-            },
-            fontFamily: {
-                handwritten: ['wc_mano', ...defaultTheme.fontFamily.sans],
-                title: ['slukoni', ...defaultTheme.fontFamily.sans],
-                subtitle: ['lexend', ...defaultTheme.fontFamily.sans],
-            },
-            keyframes: {
-                scale: {
-                    '0%, 100%': { transform: 'scale(1);' },
-                    '50%': { transform: 'scale(1.1);' },
-                },
-            },
-            animation: {
-                scale: 'scale 1s ease-in-out infinite',
-            },
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      boxShadow: {
+        "black-small": "2px 3px 0 0 rgba(0, 0, 0, 1)",
+        "black-small-raised": "6px 6px 0 0 rgba(0, 0, 0, 1)",
+        black: "4px 6px 0 0 rgba(0, 0, 0, 1)",
+        "black-raised": "10px 10px 0 0 rgba(0, 0, 0, 1)",
+      },
+      fontFamily: {
+        handwritten: [
+          "sabomat",
+          "pulpensnowman",
+          "wc_mano",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        title: [
+          "radlushblack",
+          "wsstubed",
+          "oi",
+          "slukoni",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        subtitle: ["lexend", ...defaultTheme.fontFamily.sans],
+      },
+      keyframes: {
+        scale: {
+          "0%, 100%": { transform: "scale(1);" },
+          "50%": { transform: "scale(1.1);" },
         },
+      },
+      animation: {
+        scale: "scale 1s ease-in-out infinite",
+      },
     },
-    plugins: [],
+  },
+  plugins: [],
 };

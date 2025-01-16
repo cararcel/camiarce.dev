@@ -42,6 +42,48 @@
     font-display: fallback;
 }
 
+@font-face {
+  font-family: 'oi';
+  src: url('./assets/fonts/oi.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'wsstubed';
+  src: url('./assets/fonts/wsstubed.woff2') format('woff2'),
+       url('./assets/fonts/wsstubed.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'radlushblack';
+  src: url('./assets/fonts/radlushblack.woff2') format('woff2'),
+       url('./assets/fonts/radlushblack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'pulpensnowman';
+  src: url('./assets/fonts/pulpensnowman.woff2') format('woff2'),
+       url('./assets/fonts/pulpensnowman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'sabomat';
+  src: url('./assets/fonts/sabomat.woff2') format('woff2'),
+       url('./assets/fonts/sabomat.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
 @layer components {
     .starburst {
         aspect-ratio: 1;

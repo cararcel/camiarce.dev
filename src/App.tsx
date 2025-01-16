@@ -47,7 +47,7 @@ function App() {
                 Hello,
               </p>
               <div className="text-2xl md:text-3xl font-bold">
-                My name is:
+                My name is:{" "}
                 <h1 className="inline-block text-3xl md:text-4xl font-handwritten font-bold">
                   Camila Arce
                 </h1>
@@ -432,7 +432,7 @@ function App() {
             alt=""
           />
           <figcaption className="mt-2 font-handwritten text-xl">
-            Never gonna give you up...
+            Never gonna give you up, Never gonna let you down &#127926;
           </figcaption>
         </figure>
       </div>

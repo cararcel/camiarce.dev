@@ -9,8 +9,18 @@ import MobilePhone from "./components/icons/MobilePhone";
 import Debugging from "./components/icons/Debugging";
 import Seo from "./components/icons/Seo";
 import Project from "./components/Project";
+import "./i18next";
+import { useParams } from "react-router";
+import { useTranslation } from "react-i18next";
 
 function App() {
+  const params = useParams();
+  const { t, i18n } = useTranslation();
+
+  if (params.language && ["fr", "es"].includes(params.language)) {
+    i18n.changeLanguage(params.language);
+  }
+
   return (
     <>
       <header className="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
@@ -19,13 +29,13 @@ function App() {
             href="#about-me"
             className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
           >
-            About me
+            {t("About me")}
           </a>
           <a
             href="#projects"
             className="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
           >
-            Projects
+            {t("Projects")}
           </a>
           <Link
             title="contact me on LinkedIn"
@@ -33,7 +43,7 @@ function App() {
             href="https://www.linkedin.com/in/arce-camila/"
             className=" bg-green-400 px-3 py-2"
           >
-            <span className="hidden md:inline">Contact me on</span>
+            <span className="hidden md:inline">{t("Contact me on")}</span>
             <LinkedIn className="size-5" />
           </Link>
         </nav>
@@ -44,10 +54,10 @@ function App() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 gap-y-16 px-4">
             <Card className="group col-span-2 bg-white p-4 relative">
               <p className="text-5xl mb-6 font-black tracking-wide font-title">
-                Hello,
+                {t("Hello")},
               </p>
               <div className="text-2xl md:text-3xl font-bold">
-                My name is:{" "}
+                {t("My name is")}:{" "}
                 <h1 className="inline-block text-3xl md:text-4xl font-handwritten font-bold">
                   Camila Arce
                 </h1>
@@ -55,16 +65,18 @@ function App() {
 
               <div className="animate-scale duration-100 transition absolute -top-16 right-3 starburst border-1 border-black w-28 md:w-36 bg-green-400">
                 <div className="flex justify-center items-center h-full w-full font-handwritten font-black text-lg md:text-xl text-center -rotate-12">
-                  Available
+                  {t("Available")}
                   <br />
-                  to work
+                  {t("to")}
+                  <br />
+                  {t("work")}
                 </div>
               </div>
             </Card>
             <div className="col-span-2 grid gap-6">
               <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 gap-6">
                 <span className="flex w-full justify-center items-center font-title text-4xl sm:text-3xl">
-                  I speak
+                  {t("I speak")}
                 </span>
 
                 <div>
@@ -94,7 +106,7 @@ function App() {
                     title="Switch to French"
                     className=" bg-white hover:bg-red-500 hover:text-white px-3 py-2"
                     target="_self"
-                    href="/"
+                    href="/fr"
                     icon={<span className="text-lg">🇫🇷</span>}
                     label="Français"
                   />
@@ -112,7 +124,7 @@ function App() {
                   />
                 </div>
                 <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                  Web developer
+                  {t("Web developer")}
                 </figcaption>
               </figure>
             </Card>
@@ -128,7 +140,7 @@ function App() {
                   />
                 </div>
                 <figcaption className="flex-shrink w-full h-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                  Biochemist
+                  {t("Biochemist")}
                 </figcaption>
               </figure>
             </Card>
@@ -150,7 +162,7 @@ function App() {
                   />
                 </div>
                 <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-semibold font-subtitle tracking-wider border-t-2 border-black p-2">
-                  Cat mom
+                  {t("Cat Lover")}
                 </figcaption>
               </figure>
             </Card>
@@ -166,7 +178,7 @@ function App() {
                   />
                 </div>
                 <figcaption className="flex-shrink w-full bg-white rounded-b-md text-md font-subtitle font-semibold tracking-wider border-t-2 border-black p-2">
-                  Mom
+                  {t("Mom")}
                 </figcaption>
               </figure>
             </Card>
@@ -178,7 +190,7 @@ function App() {
             id="about-me"
             className="text-5xl mb-6 font-title font-black tracking-wide"
           >
-            About me
+            {t("About me")}
           </h2>
 
           <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
@@ -210,7 +222,7 @@ function App() {
           </p>
 
           <h3 className="text-3xl mb-6 font-title font-black tracking-wide">
-            Why web progamming?
+            {t("Why web progamming?")}
           </h3>
 
           <p className="text-lg text-justify text-black leading-8 tracking-wide mb-8">
@@ -289,7 +301,7 @@ function App() {
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
-            <span className="text-xl font-black">Find me on:</span>
+            <span className="text-xl font-black">{t("Find me on")}:</span>
             <div className="flex gap-4">
               <Link
                 title="Check the GitHub repository"
@@ -316,7 +328,7 @@ function App() {
             id="projects"
             className="text-5xl mb-6 font-title font-black tracking-wide"
           >
-            Projects
+            {t("Projects")}
           </h2>
 
           <div className="grid grid-colds-1 md:grid-cols-2 gap-6">
@@ -327,14 +339,12 @@ function App() {
               tags={[
                 <Tag className="bg-orange-400" label="HTML" />,
                 <Tag className="bg-blue-300" label="CSS" />,
-                <Tag
-                  label="Integration of a design"
-                  icon={<ColorSwatch className="size-5" />}
-                />,
-                <Tag
-                  label="Responisve design"
-                  icon={<MobilePhone className="size-5" />}
-                />,
+                <Tag icon={<ColorSwatch className="size-5" />}>
+                  {t("Design integration")}
+                </Tag>,
+                <Tag icon={<MobilePhone className="size-5" />}>
+                  {t("Responisve design")}
+                </Tag>,
               ]}
               className="border-pink-400 bg-pink-400"
             />
@@ -346,11 +356,10 @@ function App() {
                 <Tag className="bg-orange-400" label="HTML" />,
                 <Tag className="bg-blue-300" label="CSS" />,
                 <Tag className="bg-yellow-400" label="Javascript" />,
-                <Tag
-                  label="Debugging"
-                  icon={<Debugging className="size-5" />}
-                />,
-                <Tag label="SEO" icon={<Seo className="size-5" />} />,
+                <Tag icon={<Debugging className="size-5" />}>
+                  {t("Debugging")}
+                </Tag>,
+                <Tag icon={<Seo className="size-5" />}>{t("SEO")}</Tag>,
               ]}
               className="border-purple-400 bg-purple-400"
             />
@@ -362,13 +371,12 @@ function App() {
                 <Tag className="bg-blue-300" label="ReactJS" />,
                 <Tag className="bg-pink-400" label="SCSS" />,
                 <Tag
-                  label="Integration of a design"
                   icon={<ColorSwatch className="size-5" />}
+                  label={t("Design integration")}
                 />,
-                <Tag
-                  label="Responisve design"
-                  icon={<MobilePhone className="size-5" />}
-                />,
+                <Tag icon={<MobilePhone className="size-5" />}>
+                  {t("Responisve design")}
+                </Tag>,
               ]}
               className="border-orange-400 bg-orange-400"
             />
@@ -381,8 +389,8 @@ function App() {
                 <Tag className="bg-orange-400" label="CSS" />,
                 <Tag className="bg-yellow-400" label="JavaScript" />,
                 <Tag
-                  label="Integration of a design"
                   icon={<ColorSwatch className="size-5" />}
+                  label={t("Design integration")}
                 />,
               ]}
               className="border-green-400 bg-green-400"
@@ -394,7 +402,7 @@ function App() {
       <footer className="max-w-4xl mx-auto my-10">
         <Card className="w-full bg-blue-300 flex flex-wrap justify-center gap-4 items-center p-4 font-black tracking-wider">
           <span>
-            Copyright &copy; <time dateTime="2024">2024</time>
+            {t("Copyright")} &copy; <time dateTime="2024">2024</time>
           </span>
           <Link
             title="Edit the page on GitHub"
@@ -402,25 +410,25 @@ function App() {
             target="_blank"
             href="https://github.com/cararcel/camiarce.dev/blob/main/index.html"
             icon={<GitHub className="size-6" />}
-            label="Edit on GitHub"
+            label={t("Edit on GitHub")}
           />
         </Card>
       </footer>
 
       <div className="mt-96 font-handwritten text-xl font-black text-center">
-        Why are you still scrolling?
+        {t("Why are you still scrolling?")}
       </div>
 
       <div className="mt-96 font-handwritten text-xl font-black text-center">
-        There's nothing more... Please stop scrolling.
+        {t("There's nothing more... Please stop scrolling")}.
       </div>
 
       <div className="mt-96 font-handwritten text-xl font-black text-center">
-        I'm warning you. Stop scrolling.
+        {t("I'm warning you. Stop scrolling")}.
       </div>
 
       <div className="mt-96 font-handwritten text-xl font-black text-center">
-        I did warn you. This is on you.
+        {t("I did warn you. This is on you")}.
       </div>
 
       <div className="mt-96 mb-16 flex justify-center w-full">

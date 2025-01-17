@@ -48,16 +48,16 @@ export default function Wwebp({ ...props }: React.ComponentProps<"p">) {
         experience and thought it was fun and interesting. So I decided to take
         a web developer formation at{" "}
         <a
-          href="https://openclassNamerooms.com/fr/paths/899-developpeur-web"
+          href="https://openclassrooms.com/fr/paths/899-developpeur-web"
           target="_blank"
           className="font-bold underline hover:no-underline"
         >
-          OpenclassNamerooms
+          Openclassrooms
         </a>
         . Which I finished end of September 2024, since then I'm{" "}
         <a
           href="/assets/oc-certificat.pdf"
-          title="my OpenclassNamerooms certificate"
+          title="my Openclassrooms certificate"
           target="_blank"
           className="font-bold underline hover:no-underline"
         >

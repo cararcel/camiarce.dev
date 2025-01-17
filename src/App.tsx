@@ -13,17 +13,44 @@ import { useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import AboutMe from "./components/AboutMe";
 import Wwebp from "./components/Wwebp";
+import { Helmet } from "react-helmet";
 
 function App() {
   const params = useParams();
   const { t, i18n } = useTranslation();
+  let language = "en";
 
   if (params.language && ["fr", "es"].includes(params.language)) {
     i18n.changeLanguage(params.language);
+    language = params.language;
   }
 
   return (
     <>
+      <Helmet>
+        <html lang={language} />
+        <meta
+          name="description"
+          content={t("Web developer, biochemist, cat mom & mom")}
+        />
+        <meta
+          property="og:description"
+          content={t("Web developer, biochemist, cat mom & mom")}
+        />
+        <meta
+          property="og:image"
+          content={`/assets/img/open-graph-image-${language}.png`}
+        />
+        <meta
+          name="twitter:description"
+          content={t("Web developer, biochemist, cat mom & mom")}
+        />
+        <meta
+          name="twitter:image"
+          content={`/assets/img/open-graph-image-${language}.png`}
+        />
+      </Helmet>
+
       <header className="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
         <nav className="w-full bg-blue-300 flex justify-around md:justify-end space-x-2 items-center card px-4 font-subtitle">
           <a

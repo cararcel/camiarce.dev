@@ -6,12 +6,14 @@ export default function Project({
   name,
   imgName,
   githubUrl,
+  githubTitle,
   tags,
   className = "",
 }: React.ComponentProps<"div"> & {
   name: string;
   imgName: string;
   githubUrl: string;
+  githubTitle: string;
   tags: React.ReactNode[];
 }) {
   return (
@@ -51,7 +53,7 @@ export default function Project({
 
       <div className="flex flex-wrap gap-4">
         <Link
-          title="Check the GitHub repository"
+          title={githubTitle}
           className="bg-white px-2 py-1"
           target="_blank"
           href={githubUrl}

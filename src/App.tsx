@@ -9,21 +9,15 @@ import MobilePhone from "./components/icons/MobilePhone";
 import Debugging from "./components/icons/Debugging";
 import Seo from "./components/icons/Seo";
 import Project from "./components/Project";
-import { useParams } from "react-router";
 import { useTranslation } from "react-i18next";
 import AboutMe from "./components/AboutMe";
 import Wwebp from "./components/Wwebp";
 import { Helmet } from "react-helmet";
 
-function App() {
-  const params = useParams();
+function App({ language }: { language: "en" | "fr" | "es" }) {
   const { t, i18n } = useTranslation();
-  let language = "en";
 
-  if (params.language && ["fr", "es"].includes(params.language)) {
-    i18n.changeLanguage(params.language);
-    language = params.language;
-  }
+  i18n.changeLanguage(language);
 
   return (
     <>

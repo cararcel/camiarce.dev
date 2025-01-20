@@ -9,7 +9,9 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/:language?" element={<App />} />
+        <Route path="/" element={<App language="en" />} />
+        <Route path="/es" element={<App language="es" />} />
+        <Route path="/fr" element={<App language="fr" />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

@@ -14,11 +14,9 @@ import AboutMe from "./components/AboutMe";
 import Wwebp from "./components/Wwebp";
 import { Helmet } from "react-helmet";
 
-function App({ language }: { language: "en" | "fr" | "es" }) {
+function App() {
   const { t, i18n } = useTranslation();
-
-  i18n.changeLanguage(language);
-
+  const language = i18n.language;
   return (
     <>
       <Helmet>

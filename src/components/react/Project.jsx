@@ -2,7 +2,7 @@ import GitHub from '../icons/GitHub';
 import Card from './Card';
 import Link from './Link';
 
-export default function ProjectWrap({
+export default function Project({
     name,
     imgName,
     githubUrl,

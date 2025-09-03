@@ -17,10 +17,11 @@ export default {
                     ...defaultTheme.fontFamily.sans,
                 ],
                 title: [
-                    'oi',
                     'radlushblack',
                     'wsstubed',
                     'slukoni',
+                    'oi',
+
                     ...defaultTheme.fontFamily.sans,
                 ],
                 subtitle: ['lexend', ...defaultTheme.fontFamily.sans],

@@ -4,6 +4,9 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/astro/Header.astro';
 import AboutMe from '../components/astro/AboutMe.astro';
 import Projects from '../components/astro/Projects.astro';
+import Footer from '../components/astro/Footer.astro';
+import Cookies from '../components/react/Cookies.jsx';
+import Modal from '../components/react/Modal.jsx';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -14,4 +17,6 @@ import Projects from '../components/astro/Projects.astro';
     <Banner />
     <AboutMe />
     <Projects />
+    <Footer />
+    <Modal client:load />
 </Layout>

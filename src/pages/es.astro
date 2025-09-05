@@ -1,0 +1,161 @@
+---
+import Banner from '../components/astro/Banner.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/Header.astro';
+import AboutMe from '../components/astro/AboutMe.astro';
+import Projects from '../components/astro/Projects.astro';
+import Footer from '../components/astro/Footer.astro';
+import Modal from '../components/react/Modal.jsx';
+import Link from '../components/react/Link';
+import GitHub from '../components/icons/GitHub';
+import LinkedIn from '../components/icons/LinkedIn';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+    <Header />
+    <Banner />
+    <section class="max-w-4xl mx-auto my-12 md:my-24 px-4">
+        <h2
+            id="sobre-mi"
+            class="text-5xl mb-6 font-title font-black tracking-wide"
+        >
+            Sobre mí
+        </h2>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Hola, soy Camila y esta es mi historia. Estudié bioquímica en Chile
+            e hice mi tesis en el departamento de biología celular, estudiando
+            <a
+                href="https://www.mdpi.com/2673-7140/4/1/1"
+                target="_blank"
+                class="font-bold underline hover:no-underline"
+            >
+                cómo afecta el consumo de alcohol en grandes cantidades en la
+                adolescencia</a
+            >. Después de terminar la univeridad, me fui a perseguir uno de mis
+            grandes sueños, la experiencia de vivir en el extranjero. Decidí
+            irme a Irlanda y aprovechar de aprender inglés. Luego me fui a vivir
+            a Alemania, en donde ingresé a un máster en bioquímica en la
+            Universidad de Colonia. Una experiencia difícil en una pasantía
+            provocó una crisis de ansiedad que me llevó a replantearme mis
+            prioridades. Junto a mi esposo, decidimos mudarnos a Francia, un
+            país que ofrecía nuevas oportunidades y un idioma más amigable.
+            Además de sol y playa.
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            En Francia enfrenté los retos típicos de una nueva vida: adaptación
+            cultural, búsqueda de empleo y la barrera del idioma.Pasaron Tras
+            varios meses sin encontrar una posición en mi campo especializado,
+            tenía dos opciones: especializarme en otra área para seguir en
+            ciencias o comenzar algo completamente nuevo. Y aquí estoy; pueden
+            deducir cuál camino tomé.
+        </p>
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Mientras estudiaba para ser web‑developer, llegó mi bebé. La
+            maternidad trajo noches sin dormir y una montaña de desafíos, pero
+            también una fuerza inesperada: logré completar mi formación a pesar
+            de todo. Ser padres cambia todo y nos dimos cuenta de que
+            necesitamos un “pueblo” alrededor para criar. Por eso decidimos
+            mudarnos a Bélgica. Estar cerca de sus seres queridos nos brinda el
+            apoyo y la comunidad que deseamos para criar y nos llena de energía
+            para seguir adelante.
+        </p>
+
+        <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+            <span class="inline-block rotate-180 mr-1">?</span>Por qué
+            programación web?
+        </h3>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Hace algunos años supe de un juego para aprender programación:
+            <a
+                href="https://codecombat.com/user/cararcel"
+                target="_blank"
+                class="font-bold underline hover:no-underline">CodeCombat</a
+            >. Empecé a jugar por diversión y aprendí bastante. Después decidí
+            tomar algunos cursos para profundizar. Los primeros fueron de
+            <a
+                href="https://laracasts.com/"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Laracasts</a
+            >. Empecé a ver algunos videos sobre HTML, CSS y PHP. Jeffry Way
+            explica muy bien; hacía que todo pareciera muy simple y yo, detrás
+            de la pantalla, intentando averiguar por qué a mí no me funcionaba
+            (¡spoiler alert!: a veces eran typos).
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Luego descubrí
+            <a
+                href="https://grafikart.fr"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Grafikart</a
+            >, lo cual fue genial para mí porque podía practicar mi francés (al
+            menos a entenderlo) y seguir aprendiendo. rehinicié con HTML, CSS y
+            continué con JavaScript.
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Tomar la decisión de volver a estudiar (oficialmente) fue difícil,
+            pero quería formalizar los conocimientos que ya tenía y seguir
+            aprendiendo más del desarrollo web. Así que me inscribí en una
+            formación de reconversión en
+            <a
+                href="https://openclassrooms.com/fr/paths/899-developpeur-web"
+                target="_blank"
+                class="font-bold underline hover:no-underline">OpenClassrooms</a
+            >. Y ahora puedo decir que soy
+            <a
+                href="/assets/oc-certificat.pdf"
+                title="mi certificado de OpenClassrooms"
+                target="_blank"
+                class="font-bold underline hover:no-underline"
+            >
+                oficialmente una desarrolladora web.</a
+            > ¡Hoorray!
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Despues de termina mi formación me he didicado a la maternidarks y
+            con proyectos personales que me permiten seguir mantenerme
+            actualizada (o al menos no oxidar mis conocimientos). Actualmente
+            estoy en proceso de aprender más acerca sobre React con el curso
+            <a
+                href="https://www.epicreact.dev/"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Epic React</a
+            >.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+            <span class="text-xl font-black">Encuéntrame en:</span>
+
+            <div class="flex gap-4">
+                <Link
+                    title={t('My GitHub repository')}
+                    className="bg-white px-3 py-2"
+                    target="_blank"
+                    href="https://github.com/cararcel"
+                >
+                    <GitHub className="size-6" />GitHub
+                </Link>
+
+                <Link
+                    title={t('My LinkedIn profile')}
+                    className="bg-blue-600 text-white px-3 py-2"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/arce-camila/"
+                >
+                    <LinkedIn className="size-6 fill-current" />LinkedIn
+                </Link>
+            </div>
+        </div>
+    </section>
+    <Projects />
+    <Footer />
+    <Modal client:load />
+</Layout>

@@ -1,7 +1,8 @@
 ---
 import LinkedIn from '../icons/LinkedIn';
-import Card from '../react/Card';
-import Player from './Player.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <header class="max-w-4xl mx-auto mb-10 px-4 pt-10 w-full">
@@ -12,21 +13,21 @@ import Player from './Player.astro';
             href="#about-me"
             class="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
         >
-            About me
+            {t('About me')}
         </a>
         <a
             href="#projects"
             class="py-4 px-3 sm:py-4 sm:px-6 block font-extrabold hover:underline"
         >
-            Projects
+            {t('Projects')}
         </a>
         <a
-            title="Contact me on LinkedIn"
+            title={t('contact me on LinkedIn')}
             target="_blank"
             href="https://www.linkedin.com/in/arce-camila/"
             class="font-extrabold rounded-full shadow-black-small hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition duration-150 ease-in-out border-2 border-black flex items-center gap-1 bg-green-400 px-3 py-2"
         >
-            <span class="hidden md:inline">Contact me on</span>
+            <span class="hidden md:inline">{t('Contact me on')}</span>
             <LinkedIn className="size-5" />
         </a>
     </nav>

@@ -16,8 +16,8 @@ export default function Modal() {
             {isOpen && (
                 <div className="w-min mb-5 p-2 bg-white border-2 border-black shadow-black rounded-lg">
                     <div className="">
-                        Our kitchen ran out of cookies, but we do have rosé.
-                        Click ‘Accept’ and we’ll pour you a virtual glass.
+                        I ran out of cookies, but I do have rosé. Click ‘Accept’
+                        and I’ll pour you a virtual glass.
                     </div>
 
                     <div className="flex flex-row gap-2 mt-2">

@@ -4,22 +4,24 @@ import Debugging from '../icons/Debugging';
 import LinkIcon from '../icons/Link';
 import MobilePhone from '../icons/MobilePhone';
 import Seo from '../icons/Seo';
-import Card from '../react/Card';
 import Link from '../react/Link';
 import Project from '../react/Project';
 import Tag from '../react/Tag';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <section class="pb-24 px-4 max-w-4xl mx-auto">
     <h2 id="projects" class="text-5xl mb-6 font-title font-black tracking-wide">
-        Projects
+        {t('Projects')}
     </h2>
     <div class="grid grid-colds-1 md:grid-cols-2 gap-6">
         <Project
             name="Pia Esthétique"
             imgName="pia-esthetique"
             githubUrl="https://github.com/cararcel/Pia-estetique"
-            githubTitle="Check the GitHub repository"
+            githubTitle={t('Check the GitHub repository')}
             className="border-yellow-800 bg-yellow-800"
         >
             <Link
@@ -32,56 +34,66 @@ import Tag from '../react/Tag';
             <Tag className="bg-black text-white"> Astro </Tag>
             <Tag className="bg-cyan-300"> TailwindCSS</Tag>
             <Tag className="bg-yellow-400"> JavaScript</Tag>
-            <Tag> <MobilePhone className="size-5" /> Responisve design</Tag>
+            <Tag>
+                <MobilePhone className="size-5" /> {t('Responisve design')}</Tag
+            >
         </Project>
         <Project
             name="Booki"
             imgName="booki"
             githubUrl="https://github.com/cararcel/oc-p2-booki"
-            githubTitle="Check the GitHub repository"
+            githubTitle={t('Check the GitHub repository')}
             className="border-pink-400 bg-pink-400"
         >
             <Tag className="bg-orange-400"> HTML </Tag>
             <Tag className="bg-blue-300"> CSS</Tag>
-            <Tag> <MobilePhone className="size-5" /> Responisve design</Tag>
-            <Tag> <ColorSwatch className="size-5" /> Design integration</Tag>
+            <Tag>
+                <MobilePhone className="size-5" />{t('Responisve design')}</Tag
+            >
+            <Tag>
+                <ColorSwatch className="size-5" />{t('Design integration')}</Tag
+            >
         </Project>
         <Project
             name="Nina Carducci"
             imgName="nina-carducci"
             githubUrl="https://github.com/cararcel/Nina-Carducci-Dev"
-            githubTitle="Check the GitHub repository"
+            githubTitle={t('Check the GitHub repository')}
             className="border-purple-400 bg-purple-400"
         >
             <Tag className="bg-orange-400"> HTML </Tag>
             <Tag className="bg-blue-300"> CSS</Tag>
             <Tag className="bg-yellow-400"> Javascript</Tag>
-            <Tag> <Debugging className="size-5" /> Debugging</Tag>
+            <Tag> <Debugging className="size-5" />{t('Debugging')}</Tag>
             <Tag> <Seo className="size-5" /> SEO</Tag>
         </Project>
         <Project
             name="Kasa"
             imgName="kasa"
             githubUrl="https://github.com/cararcel/kasa-oc-p5"
-            githubTitle="Check the GitHub repository"
+            githubTitle={t('Check the GitHub repository')}
             className="border-orange-400 bg-orange-400"
         >
             <Tag className="bg-blue-300"> ReactJS </Tag>
             <Tag className="bg-pink-400"> SCSS</Tag>
-            <Tag> <MobilePhone className="size-5" /> Responisve design</Tag>
+            <Tag>
+                <MobilePhone className="size-5" />{t('Responisve design')}</Tag
+            >
             <Tag> <ColorSwatch className="size-5" /> Design integration</Tag>
         </Project>
         <Project
             name="Sophie Bluel"
             imgName="sophie-bluel"
             githubUrl="https://github.com/cararcel/oc-p3-portfolio-architecte-sophie-bluel"
-            githubTitle="Check the GitHub repository"
+            githubTitle={t('Check the GitHub repository')}
             className="border-green-400 bg-green-400"
         >
             <Tag className="bg-orange-400"> HTML </Tag>
             <Tag className="bg-blue-300"> CSS</Tag>
             <Tag className="bg-yellow-400"> JavaScript</Tag>
-            <Tag> <ColorSwatch className="size-5" /> Design integration</Tag>
+            <Tag>
+                <ColorSwatch className="size-5" />{t('Design integration')}</Tag
+            >
         </Project>
     </div>
 </section>

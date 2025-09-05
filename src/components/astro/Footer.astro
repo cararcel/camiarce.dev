@@ -2,8 +2,9 @@
 import GitHub from '../icons/GitHub';
 import Card from '../react/Card';
 import Link from '../react/Link';
-import QrCode from '../icons/QrCode';
-import Player from '../astro/Player.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
 
 const year = new Date().getFullYear();
 ---

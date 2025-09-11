@@ -1,15 +1,14 @@
 ---
-import Banner from '../components/astro/Banner.astro';
+import Banner from '../components/astro/content/Banner.astro';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/Header.astro';
-import AboutMe from '../components/astro/AboutMe.astro';
+import Header from '../components/astro/content/Header.astro';
 import Projects from '../components/astro/Projects.astro';
-import Footer from '../components/astro/Footer.astro';
-import Modal from '../components/react/Modal.jsx';
+import Footer from '../components/astro/content/Footer.astro';
+import CookieBanner from '../components/react/CookieBanner.jsx';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import GitHub from '../components/icons/GitHub';
 import LinkedIn from '../components/icons/LinkedIn';
-import Link from '../components/react/Link';
+import Link from '../components/astro/Link.astro';
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
@@ -122,7 +121,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
                 class="font-bold underline hover:no-underline"
             >
                 officiellement développeuse web.</a
-            > ¡Hoorray!
+            >  youpi !
         </p>
 
         <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
@@ -162,5 +161,5 @@ const t = useTranslations(getLangFromUrl(Astro.url));
     </section>
     <Projects />
     <Footer />
-    <Modal client:load />
+    <CookieBanner client:load trans={t('cookie')} />
 </Layout>

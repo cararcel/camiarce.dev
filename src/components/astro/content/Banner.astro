@@ -1,9 +1,11 @@
 ---
-import Card from '../react/Card';
-import Link from '../react/Link';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import { lang } from '../../i18n/ui';
-
+import Card from '../Card.astro';
+import Link from '../Link.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import { lang } from '../../../i18n/ui';
+import blocksImage from '../../../assets/blocks.png';
+import muffinImage from '../../../assets/muffin.png';
+import { Image } from 'astro:assets';
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
@@ -65,10 +67,13 @@ const t = useTranslations(getLangFromUrl(Astro.url));
         <Card className="group bg-pink-400">
             <figure class="w-full flex justify-center flex-col">
                 <div class="flex justify-around items-end h-10 m-4">
-                    <img
-                        class="group-hover:animate-spin h-24"
-                        src="/assets/img/blocks.png"
+                    <Image
+                        class="group-hover:animate-spin h-24 max-w-fit"
+                        src={blocksImage}
                         alt={t('Building blocks')}
+                        layout="constrained"
+                        width={110}
+                        height={100}
                     />
                 </div>
                 <figcaption
@@ -124,10 +129,11 @@ const t = useTranslations(getLangFromUrl(Astro.url));
         <Card className="group bg-purple-400">
             <figure class="w-full flex justify-center flex-col">
                 <div class="flex justify-around items-end h-10 m-4">
-                    <img
-                        class="group-hover:animate-spin h-24"
-                        src="/assets/img/muffin.webp"
+                    <Image
+                        class="group-hover:animate-spin h-24 max-w-fit"
+                        src={muffinImage}
                         alt={t('Muffin from Bluey tv show')}
+                        densities={[1, 2]}
                     />
                 </div>
                 <figcaption

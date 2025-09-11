@@ -38,5 +38,10 @@
     "Check the GitHub repository": "Verifica el repositorio de GitHub",
     "My LinkedIn profile": "Mi perfil de LinkedIn",
     "Edit the page on GitHub": "Editar la página en GitHub",
-    "Web developer, biochemist, cat mom & mom": "Desarrollador web, bioquímico, mamá gata y mamá"
+    "Web developer, biochemist, cat mom & mom": "Desarrollador web, bioquímico, mamá gata y mamá",
+    "cookie": {
+        "text": "Se me acabaron las cookies, pero tengo rosé. Haz click en 'Aceptar' y te sirvo una copa virtual .",
+        "accept": "Aceptar",
+        "reject": "Rechazar"
+    }
 }

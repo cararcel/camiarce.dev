@@ -1,8 +1,8 @@
 import Wine from '../icons/Wine';
 import { useState } from 'react';
 
-export default function Modal() {
-    const [isOpen, setIsOpen] = useState(false);
+export default function Modal({ trans }) {
+    const [isOpen, setIsOpen] = useState(true);
     const [isFull, setIsFull] = useState(false);
 
     const openModal = () => setIsOpen(true);
@@ -15,10 +15,7 @@ export default function Modal() {
         <div className="p-2 fixed bottom-10 left-10">
             {isOpen && (
                 <div className="w-min mb-5 p-2 bg-white border-2 border-black shadow-black rounded-lg">
-                    <div className="">
-                        I ran out of cookies, but I do have rosé. Click ‘Accept’
-                        and I’ll pour you a virtual glass.
-                    </div>
+                    <div className="">{trans.text}</div>
 
                     <div className="flex flex-row gap-2 mt-2">
                         <button
@@ -40,7 +37,7 @@ export default function Modal() {
                                 }, 4000);
                             }}
                         >
-                            Accept
+                            {trans.accept}
                         </button>
                         <button
                             className="flex
@@ -58,7 +55,7 @@ export default function Modal() {
                                 emptyGlass();
                             }}
                         >
-                            Reject
+                            {trans.reject}
                         </button>
                     </div>
                 </div>

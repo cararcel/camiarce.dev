@@ -1,8 +1,8 @@
 ---
-import GitHub from '../icons/GitHub';
-import Card from '../react/Card';
-import Link from '../react/Link';
-import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import GitHub from '../../icons/GitHub';
+import Card from '../Card.astro';
+import Link from '../Link.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 

@@ -19,16 +19,8 @@ export default function Modal({ trans }) {
 
                     <div className="flex flex-row gap-2 mt-2">
                         <button
-                            className="flex
-                    items-center
-                    gap-1
-                    font-extrabold
-                    rounded-lg
-                    shadow-black-small
-                    border-2
-                    border-black
-                    px-2
-                    py-1"
+                            className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2  border-black px-2 py-1"
+                            aria-label={trans['reject button']}
                             onClick={() => {
                                 closeModal();
                                 fullGlass();
@@ -40,16 +32,8 @@ export default function Modal({ trans }) {
                             {trans.accept}
                         </button>
                         <button
-                            className="flex
-                    items-center
-                    gap-1
-                    font-extrabold
-                    rounded-lg
-                    shadow-black-small
-                    border-2
-                    border-black
-                    px-2
-                    py-1"
+                            aria-label={trans['accept button']}
+                            className="flex items-center gap-1 font-extrabold rounded-lg shadow-black-small border-2  border-black px-2 py-1"
                             onClick={() => {
                                 closeModal();
                                 emptyGlass();
@@ -61,6 +45,7 @@ export default function Modal({ trans }) {
                 </div>
             )}
             <button
+                aria-label={trans['cookie button']}
                 className="relative bg-white overflow-hidden border-2 border-black hover:shadow-black-small-raised hover:-translate-x-1 hover:-translate-y-1 transition shadow-black-small p-4 rounded-full"
                 onClick={openModal}
             >

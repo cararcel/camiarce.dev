@@ -40,9 +40,13 @@
     "Edit on": "Mettre à jour sur",
     "Web developer, biochemist, cat mom & mom": "Développeuse web, biochimiste, maman de chats et maman",
     "og-image": "open-graph-image-fr",
+    "site-manifest": "fr.site.manifest",
     "cookie": {
         "text": "Je n'ai plus de cookies, mais j'ai du rosé. Cliquez sur 'Accepter' et je vous servirai un verre virtuel.",
         "accept": "Accepter",
-        "reject": "Rejecter"
+        "reject": "Rejecter",
+        "accept button": "Bouton accepter",
+        "reject button": "Bouton refuser",
+        "cookie button": "Bouton de cookies"
     }
 }

@@ -40,9 +40,13 @@
     "Edit the page on GitHub": "Editar la página en GitHub",
     "Web developer, biochemist, cat mom & mom": "Desarrollador web, bioquímico, mamá gata y mamá",
     "og-image": "open-graph-image-es",
+    "site-manifest": "es.site.manifest",
     "cookie": {
         "text": "Se me acabaron las cookies, pero tengo rosé. Haz click en 'Aceptar' y te sirvo una copa virtual .",
         "accept": "Aceptar",
-        "reject": "Rechazar"
+        "reject": "Rechazar",
+        "accept button": "botón aceptar",
+        "reject button": "botón rechazar",
+        "cookie button": "Boton de cookies"
     }
 }

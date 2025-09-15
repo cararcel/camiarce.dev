@@ -1,0 +1,165 @@
+---
+import Banner from '../components/astro/content/Banner.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/content/Header.astro';
+import Projects from '../components/astro/Projects.astro';
+import Footer from '../components/astro/content/Footer.astro';
+import CookieBanner from '../components/react/CookieBanner.jsx';
+import GitHub from '../components/icons/GitHub';
+import LinkedIn from '../components/icons/LinkedIn';
+import Link from '../components/astro/Link.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+    <Header />
+    <Banner />
+    <section class="max-w-4xl mx-auto my-12 md:my-24 px-4">
+        <h2
+            id="about-me"
+            class="text-5xl mb-6 font-title font-black tracking-wide"
+        >
+            About Me
+        </h2>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Hi, I’m Camila and this is my story. I studied biochemistry in Chile
+            and wrote my thesis in the Department of Cell Biology, researching
+            <a
+                href="https://www.mdpi.com/2673-7140/4/1/1"
+                target="_blank"
+                class="font-bold underline hover:no-underline"
+            >
+                how heavy alcohol consumption affects adolescence.
+            </a> After finishing university, I chased one of my big dreams: living
+            abroad. I first went to Ireland to improve my English, then moved to
+            Germany, where I enrolled in a master’s program in biochemistry at the
+            University of Cologne. A difficult experience during an internship triggered
+            an anxiety crisis that made me rethink my priorities. Together with my
+            husband, we decided to move to France, a country that offered new opportunities,
+            a friendlier language, and plenty of sunshine and beaches.
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            In France I faced the typical challenges of a new life: cultural
+            adaptation, job hunting, and the language barrier. After several
+            months without finding a position in my highly specialized field, I
+            had two options: specialize in another area to stay in science, or
+            start something completely new. And here I am—you can guess which
+            path I chose.
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            It’s been a lot of fun, but also quite challenging for me. I’ve
+            learned so much, rewiring my brain to grasp new concepts and think
+            differently. In science and programming, there’s lots of knowledge
+            we can transfer, yet there’s also plenty of new material to
+            integrate. Truly the best of both worlds.
+        </p>
+
+        <!-- <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            While studying to become a web developer, my baby arrived.
+            Motherhood brought sleepless nights and a mountain of challenges,
+            but also an unexpected strength: I managed to finish my training
+            despite everything. Becoming parents changes everything, and we
+            realized we needed a “village” around us to raise our child. That’s
+            why we decided to move to Belgium. Being close to his family gives
+            us the support and community we want for raising our kid, and it
+            fills us with energy to keep moving forward.
+        </p> -->
+
+        <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+            <span class="inline-block rotate-180 mr-1">?</span>Why Web
+            Development?
+        </h3>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            A few years ago I discovered a game for learning programming:
+            <a
+                href="https://codecombat.com/user/cararcel"
+                target="_blank"
+                class="font-bold underline hover:no-underline">CodeCombat</a
+            >. I started playing for fun and learned a lot. Then I decided to
+            take some courses to dive deeper. The first ones were on
+            <a
+                href="https://laracasts.com/"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Laracasts</a
+            >. I watched videos on HTML, CSS, and PHP. Jeffrey Way explains
+            things very well; everything looks simple, and I was behind the
+            screen trying to figure out why it didn’t work for me (spoiler
+            alert: sometimes it was just a typo).
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Later I discovered
+            <a
+                href="https://grafikart.fr"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Grafikart</a
+            >, which was great for me because I could practice my French (at
+            least understand it) while continuing to learn. I revisited HTML and
+            CSS and kept going with JavaScript.
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            Deciding to go back to school (officially) was tough, but I wanted
+            to formalize the knowledge I already had and keep learning more
+            about web development. So I enrolled in a career‑change program at
+            <a
+                href="https://openclassrooms.com/fr/paths/899-developpeur-web"
+                target="_blank"
+                class="font-bold underline hover:no-underline">OpenClassrooms</a
+            >. Now I can say I am
+            <a
+                href="/assets/oc-certificat.pdf"
+                title="my OpenClassrooms certificate"
+                target="_blank"
+                class="font-bold underline hover:no-underline"
+            >
+                officially a web developer.</a
+            > ¡Hoorray!
+        </p>
+
+        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+            After finishing my training I devoted myself to motherhood and
+            personal projects that keep me up‑to‑date (or at least prevent my
+            skills from rusting). Currently I’m learning more about React
+            through the
+            <a
+                href="https://www.epicreact.dev/"
+                target="_blank"
+                class="font-bold underline hover:no-underline">Epic React</a
+            >
+            course.
+        </p>
+
+        <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+            <span class="text-xl font-black">Find me on:</span>
+            <div class="flex gap-4">
+                <Link
+                    title={t('My GitHub repository')}
+                    className="bg-white px-3 py-2"
+                    target="_blank"
+                    href="https://github.com/cararcel"
+                >
+                    <GitHub className="size-6" />GitHub
+                </Link>
+
+                <Link
+                    title={t('My LinkedIn profile')}
+                    className="bg-blue-600 text-white px-3 py-2"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/arce-camila/"
+                >
+                    <LinkedIn className="size-6 fill-current" />LinkedIn
+                </Link>
+            </div>
+        </div>
+    </section>
+    <Projects />
+    <Footer />
+    <CookieBanner client:load trans={t('cookie')} />
+</Layout>

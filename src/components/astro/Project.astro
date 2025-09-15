@@ -1,0 +1,56 @@
+---
+import GitHub from '../icons/GitHub';
+import Card from '../astro/Card.astro';
+import Link from '../astro/Link.astro';
+import Image from 'astro/components/Image.astro';
+
+const { name, imgName, githubUrl, githubTitle, className = '' } = Astro.props;
+---
+
+<Card className="group bg-white p-4">
+    <div class="text-2xl font-black">{name}</div>
+
+    <figure class={`h-56 overflow-hidden m-2 ${className} border rounded-sm`}>
+        <div class={`h-4 ${className} pl-1 gap-0.5 flex flex-start`}>
+            <div class="flex justify-start items-center gap-0.5">
+                <div class="rounded-full bg-gray-200 size-1"></div>
+                <div class="rounded-full bg-gray-200 size-1"></div>
+                <div class="rounded-full bg-gray-200 size-1"></div>
+            </div>
+        </div>
+        <img
+            class="h-52 w-full object-cover object-top group-hover:object-bottom transition-all duration-500"
+            src={`/assets/img/${imgName}-desktop@366w.webp`}
+            srcset={['366', '767', '600', '500', '289']
+                .map(
+                    (size) =>
+                        `/assets/img/${imgName}-desktop@${size}w.webp ${size}w`
+                )
+                .join(' ')}
+            sizes="(min-width: 768px) 366px,
+                ((min-width: 687px) and (max-width: 767px)) 681px,
+                ((min-width: 587px) and (max-width: 686px)) 600px,
+                ((min-width: 376px) and (max-width: 586px)) 500px,
+                (max-width: 375px) 289px"
+            alt={`Screenshot of the ${name} website`}
+        />
+
+        <figcaption class="sr-only">
+            Screenshot of the {name} website
+        </figcaption>
+    </figure>
+
+    <div class="flex flex-wrap gap-4">
+        <Link
+            title={githubTitle}
+            className="bg-white px-2 py-1"
+            target="_blank"
+            href={githubUrl}
+            label="GitHub"
+        >
+            <GitHub className="size-5" />
+        </Link>
+
+        <slot name="tags" />
+    </div>
+</Card>

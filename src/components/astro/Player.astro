@@ -1,0 +1,64 @@
+---
+
+---
+
+<a title="Play song" class="shrink-0 cursor-pointer" onclick="toggleYT()">
+    <slot />
+</a>
+
+<div id="yt-player" style="display:none"></div>
+
+<script is:inline>
+    let player;
+    let playerReady = false;
+
+    function loadAPI() {
+        if (window.YT && window.YT.Player) return Promise.resolve();
+        return new Promise((resolve) => {
+            const tag = document.createElement('script');
+            tag.src = 'https://www.youtube.com/iframe_api';
+            window.onYouTubeIframeAPIReady = () => resolve();
+            document.head.appendChild(tag);
+        });
+    }
+
+    async function ensurePlayer() {
+        await loadAPI();
+        if (!player) {
+            player = new YT.Player('yt-player', {
+                height: '0',
+                width: '0',
+                videoId: 'dQw4w9WgXcQ',
+                playerVars: { playsinline: 1, rel: 0 },
+                events: {
+                    onReady: () => {
+                        playerReady = true;
+                    },
+                },
+            });
+        }
+        if (playerReady) return;
+        await new Promise((resolve) => {
+            const check = () => {
+                if (playerReady) resolve();
+                else requestAnimationFrame(check);
+            };
+            check();
+        });
+    }
+
+    async function toggleYT() {
+        await ensurePlayer();
+        const state = player.getPlayerState();
+        if (state === 1 || state === 3) {
+            player.pauseVideo();
+        } else if (state === 2) {
+            player.playVideo();
+        } else {
+            try {
+                player.seekTo(0, true);
+            } catch {}
+            player.playVideo();
+        }
+    }
+</script>

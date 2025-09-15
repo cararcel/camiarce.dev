@@ -1,0 +1,41 @@
+---
+import GitHub from '../../icons/GitHub';
+import LinkedIn from '../../icons/LinkedIn';
+import Link from '../../astro/Link.astro';
+import MyStory from './MyStory.astro';
+import WhyWeb from './WhyWeb.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<section class="max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+        {t('About me')}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+        {t('Why web programming?')}
+    </h3>
+    <WhyWeb />
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+        <span class="text-xl font-black">{t('Find me on')}:</span>
+        <div class="flex gap-4">
+            <Link
+                title={t('My GitHub repository')}
+                className=" bg-white px-3 py-2"
+                target="_blank"
+                href="https://github.com/cararcel"
+                ><GitHub className="size-6" />GitHub
+            </Link>
+            <Link
+                title={t('My LinkedIn profile')}
+                className="  bg-blue-600 text-white px-3 py-2"
+                target="_blank"
+                href="https://www.linkedin.com/in/arce-camila/"
+                ><LinkedIn className="size-6 fill-current" /> LinkedIn
+            </Link>
+        </div>
+    </div>
+</section>

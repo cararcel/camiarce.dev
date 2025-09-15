@@ -1,0 +1,21 @@
+---
+import Banner from '../components/astro/content/Banner.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/content/Header.astro';
+import AboutMe from '../components/astro/content/AboutMe.astro';
+import Projects from '../components/astro/Projects.astro';
+import Footer from '../components/astro/content/Footer.astro';
+import CookieBanner from '../components/react/CookieBanner.jsx';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+    <Header />
+    <Banner />
+    <AboutMe />
+    <Projects />
+    <Footer />
+    <CookieBanner client:load trans={t('cookie')} />
+</Layout>

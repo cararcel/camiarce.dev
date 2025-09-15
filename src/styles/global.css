@@ -1,85 +1,61 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-    font-family: 'lexend';
-    src: url('/assets/fonts/Lexend-ExtraBold.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-    font-display: fallback;
-}
+@layer utilities {
+    @font-face {
+        font-family: 'lexend';
+        src: url('/assets/fonts/Lexend-ExtraBold.woff2') format('woff2');
+        font-weight: 800;
+        font-style: normal;
+        font-display: fallback;
+    }
 
-@font-face {
-    font-family: 'lexend';
-    src: url('/assets/fonts/Lexend-SemiBold.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: fallback;
-}
+    @font-face {
+        font-family: 'lexend';
+        src: url('/assets/fonts/Lexend-SemiBold.woff2') format('woff2');
+        font-weight: 600;
+        font-style: normal;
+        font-display: fallback;
+    }
 
-@font-face {
-    font-family: 'slukoni';
-    src: url('/assets/fonts/Slukoni.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
+    @font-face {
+        font-family: 'radlushblack';
+        src: url('/assets/fonts/radlushblack.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
 
-@font-face {
-    font-family: 'wc_mano';
-    src: url('/assets/fonts/WCManoNegraBoldBta.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: fallback;
-}
-
-@font-face {
-    font-family: 'wc_mano';
-    src: url('/assets/fonts/WCManoNegraBta.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
+    @font-face {
+        font-family: 'sabomat';
+        src: url('/assets/fonts/sabomat.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        font-display: fallback;
+    }
 }
 
-@font-face {
-    font-family: 'oi';
-    src: url('/assets/fonts/oi.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
+@theme inline {
+    --shadow-black-small: 2px 3px 0 0 rgba(0, 0, 0, 1);
+    --shadow-black-small-raised: 6px 6px 0 0 rgba(0, 0, 0, 1);
+    --shadow-black: 4px 6px 0 0 rgba(0, 0, 0, 1);
+    --shadow-black-raised: 10px 10px 0 0 rgba(0, 0, 0, 1);
+
+    --animate-scale: scale 1s ease-in-out infinite;
+
+    @keyframes scale {
+        0%, 100%: {
+            transform: 'scale(1)';
+        }
+        50%: {
+            transform: 'scale(1.1)';
+        }
+    }
+
+    --font-handwritten: 'sabomat', var(--font-sans);
+    --font-title: 'radlushblack', var(--font-sans);
+    --font-subtitle: lexend, var(--font-sans);
 }
 
-@font-face {
-    font-family: 'wsstubed';
-    src: url('/assets/fonts/wsstubed.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
-
-@font-face {
-    font-family: 'radlushblack';
-    src: url('/assets/fonts/radlushblack.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
-
-@font-face {
-    font-family: 'pulpensnowman';
-    src: url('/assets/fonts/pulpensnowman.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
-@font-face {
-    font-family: 'sabomat';
-    src: url('/assets/fonts/sabomat.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: fallback;
-}
 @layer components {
     .starburst {
         aspect-ratio: 1;
@@ -141,12 +117,5 @@
             98.75% 38.87%,
             calc(99.69% - 0.99rem) calc(44.4% - -0.11rem)
         );
-    }
-
-    .card {
-        border-width: theme('borderWidth.2');
-        border-color: theme('borderColor.black');
-        box-shadow: theme('boxShadow.black');
-        border-radius: theme('borderRadius.lg');
     }
 }

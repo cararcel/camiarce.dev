@@ -1,0 +1,64 @@
+---
+import Banner from '../components/astro/content/Banner.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/astro/content/Header.astro';
+import AboutMe from '../components/astro/content/AboutMe.astro';
+import Projects from '../components/astro/Projects.astro';
+import Footer from '../components/astro/content/Footer.astro';
+import CookieBanner from '../components/react/CookieBanner.jsx';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import MyStory from '../components/astro/content/MyStory.astro';
+import WhyWeb from '../components/astro/content/WhyWeb.astro';
+import Link from '../components/astro/Link.astro';
+import GitHub from '../components/icons/GitHub';
+import LinkedIn from '../components/icons/LinkedIn';
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+    <Header />
+    <Banner />
+    <section class="px-4 max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+        {t('About me')}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+        {t('Why web programming?')}
+    </h3>
+    <WhyWeb />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+        Why Payflip?
+    </h3>
+    <p>
+
+    </p>
+
+
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+        <span class="text-xl font-black">{t('Find me on')}:</span>
+        <div class="flex gap-4">
+            <Link
+                title={t('My GitHub repository')}
+                className=" bg-white px-3 py-2"
+                target="_blank"
+                href="https://github.com/cararcel"
+                ><GitHub className="size-6" />GitHub
+            </Link>
+            <Link
+                title={t('My LinkedIn profile')}
+                className="  bg-blue-600 text-white px-3 py-2"
+                target="_blank"
+                href="https://www.linkedin.com/in/arce-camila/"
+                ><LinkedIn className="size-6 fill-current" /> LinkedIn
+            </Link>
+        </div>
+    </div>
+</section>
+    <Projects />
+    <Footer />
+    <CookieBanner client:load trans={t('cookie')} />
+</Layout>

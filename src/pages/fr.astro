@@ -1,121 +1,141 @@
 ---
-import Banner from '../components/astro/content/Banner.astro';
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/astro/content/Header.astro';
-import Projects from '../components/astro/Projects.astro';
-import Footer from '../components/astro/content/Footer.astro';
-import CookieBanner from '../components/react/CookieBanner.jsx';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import GitHub from '../components/icons/GitHub';
-import LinkedIn from '../components/icons/LinkedIn';
-import Link from '../components/astro/Link.astro';
+import Banner from "../components/astro/content/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/content/Header.astro";
+import Projects from "../components/astro/Projects.astro";
+import Footer from "../components/astro/content/Footer.astro";
+import CookieBanner from "../components/react/CookieBanner.jsx";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import GitHub from "../components/icons/GitHub";
+import LinkedIn from "../components/icons/LinkedIn";
+import Link from "../components/astro/Link.astro";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
 <Layout>
-    <Header />
-    <Banner />
-    <section class="max-w-4xl mx-auto my-12 md:my-24 px-4">
-        <h2
-            id="sobre-mi"
-            class="text-5xl mb-6 font-title font-black tracking-wide"
-        >
-            À propos de moi
-        </h2>
+  <Header />
+  <Banner />
+  <section class="max-w-4xl mx-auto my-12 md:my-24 px-4">
+    <h2 id="sobre-mi" class="text-5xl mb-6 font-title font-black tracking-wide">
+      À propos de moi
+    </h2>
 
-        <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    Bounjour, je m'appelle Camila, je suis développeuse web basée en Belgique. Je viens du Chili, j'ai étudié la biochimie et je me suis consacrée à la recherche sur 
-    <a
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Bounjour, je m'appelle Camila, je suis développeuse web basée en Belgique.
+      Je viens du Chili, j'ai étudié la biochimie et je me suis consacrée à la
+      recherche sur
+      <a
         href="https://www.mdpi.com/2673-7140/4/1/1"
         target="_blank"
         class="font-bold underline hover:no-underline"
-    >
-        comment la consommation excessive d'alcool affecte le cerveau des adolescents et ses répercussions à l'âge adulte</a
-    >. Après l'université, je suis partie à l'étranger : d'abord en Irlande, puis en Allemagne, où j'ai fait un master en biochimie à l'Université de Cologne.
-</p>
+      >
+        comment la consommation excessive d'alcool affecte le cerveau des
+        adolescents et ses répercussions à l'âge adulte</a
+      >. Après l'université, je suis partie à l'étranger : d'abord en Irlande,
+      puis en Allemagne, où j'ai fait un master en biochimie à l'Université de
+      Cologne.
+    </p>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    La vie m'a ensuite conduite en France, où il a fallu m'adapter à une nouvelle culture et repenser mon parcours. Après avoir cherché du travail dans mon domaine spécialisé sans grand succès, j'ai décidé de faire un virage vers le développement web. C'était une décision qui combinait mon côté analytique avec quelque chose de créatif, et ça m'a plu.
-</p>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      La vie m'a ensuite conduite en France, où il a fallu m'adapter à une
+      nouvelle culture et repenser mon parcours. Après avoir cherché du travail
+      dans mon domaine spécialisé sans grand succès, j'ai décidé de faire un
+      virage vers le développement web. C'était une décision qui combinait mon
+      côté analytique avec quelque chose de créatif, et ça m'a plu.
+    </p>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    Le passage de la science à la programmation a été un défi, mais aussi très gratifiant. Beaucoup de choses se transfèrent : résoudre des problèmes, penser logiquement, faire attention aux détails. Mais il faut aussi apprendre des choses nouvelles, et ça me passionne.
-</p>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Le passage de la science à la programmation a été un défi, mais aussi très
+      gratifiant. Beaucoup de choses se transfèrent : résoudre des problèmes,
+      penser logiquement, faire attention aux détails. Mais il faut aussi
+      apprendre des choses nouvelles, et ça me passionne.
+    </p>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    Actuellement installée en Belgique, je suis enthousiaste à l'idée d'apporter ma perspective unique et mon expérience diversifiée à de nouvelles opportunités dans le développement web.
-</p>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Actuellement installée en Belgique, je suis enthousiaste à l'idée
+      d'apporter ma perspective unique et mon expérience diversifiée à de
+      nouvelles opportunités dans le développement web.
+    </p>
 
-<h3 class="text-3xl mb-6 font-title font-black tracking-wide">
-    <span class="inline-block rotate-180 mr-1">?</span>Pourquoi le développement web ?
-</h3>
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      <span class="inline-block rotate-180 mr-1">?</span>Pourquoi le
+      développement web ?
+    </h3>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    Mon parcours en programmation a commencé presque par hasard, avec un jeu appelé 
-    <a
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Mon parcours en programmation a commencé presque par hasard, avec un jeu
+      appelé
+      <a
         href="https://codecombat.com/user/cararcel"
         target="_blank"
         class="font-bold underline hover:no-underline">CodeCombat</a
-    > qui transformait l'apprentissage en jeu. Ce qui a commencé comme de la curiosité s'est vite transformé en un intérêt réel, et m'a menée à explorer les technologies web sur des plateformes comme 
-    <a
+      > qui transformait l'apprentissage en jeu. Ce qui a commencé comme de la curiosité
+      s'est vite transformé en un intérêt réel, et m'a menée à explorer les technologies
+      web sur des plateformes comme
+      <a
         href="https://laracasts.com/"
         target="_blank"
         class="font-bold underline hover:no-underline">Laracasts</a
-    >
-    et 
-    <a
+      >
+      et
+      <a
         href="https://grafikart.fr"
         target="_blank"
         class="font-bold underline hover:no-underline">Grafikart</a
-    >.
-</p>
+      >.
+    </p>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    J'ai décidé de formaliser ce que j'avais appris toute seule et de m'inscrire à un programme structuré chez 
-    <a
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      J'ai décidé de formaliser ce que j'avais appris toute seule et de
+      m'inscrire à un programme structuré chez
+      <a
         href="https://openclassrooms.com/fr/paths/899-developpeur-web"
         target="_blank"
         class="font-bold underline hover:no-underline">OpenClassrooms</a
-    >. Maintenant je peux dire que je suis 
-    <a
+      >. Maintenant je peux dire que je suis
+      <a
         href="/assets/oc-certificat.pdf"
         title="mon certificat OpenClassrooms"
         target="_blank"
         class="font-bold underline hover:no-underline"
-    >
+      >
         officiellement développeuse web
-    </a>.
-</p>
+      </a>.
+    </p>
 
-<p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
-    Aujourd'hui, je construis des applications web responsives et j'élargis continuellement mes compétences. Chaque projet, je l'aborde avec le rigueur analytique que la biochimie m'a laissée. Je suis en Belgique, à la recherche d'opportunités pour rejoindre une équipe collaborative où je pourrai contribuer et continuer à grandir en tant que développeuse.
-</p>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Aujourd'hui, je construis des applications web responsives et j'élargis
+      continuellement mes compétences. Chaque projet, je l'aborde avec le
+      rigueur analytique que la biochimie m'a laissée. Je suis en Belgique, à la
+      recherche d'opportunités pour rejoindre une équipe collaborative où je
+      pourrai contribuer et continuer à grandir en tant que développeuse.
+    </p>
 
-        <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
-            <span class="text-xl font-black">Retrouvez-moi sur :</span>
-            <div class="flex gap-4">
-                <Link
-                    title={t('My GitHub repository')}
-                    className="bg-white px-3 py-2"
-                    target="_blank"
-                    href="https://github.com/cararcel"
-                >
-                    <GitHub className="size-6" />GitHub
-                </Link>
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+      <span class="text-xl font-black">Retrouvez-moi sur :</span>
+      <div class="flex gap-4">
+        <Link
+          title={t("My GitHub repository")}
+          className="bg-white px-3 py-2"
+          target="_blank"
+          href="https://github.com/cararcel"
+        >
+          <GitHub className="size-6" />GitHub
+        </Link>
 
-                <Link
-                    title={t('My LinkedIn profile')}
-                    className="bg-blue-600 text-white px-3 py-2"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/arce-camila/"
-                >
-                    <LinkedIn className="size-6 fill-current" />LinkedIn
-                </Link>
-            </div>
-        </div>
-    </section>
-    <Projects />
-    <Footer />
-    <CookieBanner client:load trans={t('cookie')} />
+        <Link
+          title={t("My LinkedIn profile")}
+          className="bg-blue-600 text-white px-3 py-2"
+          target="_blank"
+          href="https://www.linkedin.com/in/arce-camila/"
+        >
+          <LinkedIn className="size-6 fill-current" />LinkedIn
+        </Link>
+      </div>
+    </div>
+  </section>
+  <Projects />
+  <Footer />
+  <CookieBanner client:load trans={t("cookie")} />
 </Layout>

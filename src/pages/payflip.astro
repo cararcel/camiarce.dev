@@ -1,0 +1,81 @@
+---
+import Banner from "../components/astro/content/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/content/Header.astro";
+import AboutMe from "../components/astro/content/AboutMe.astro";
+import Projects from "../components/astro/Projects.astro";
+import Footer from "../components/astro/content/Footer.astro";
+import CookieBanner from "../components/react/CookieBanner.jsx";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import MyStory from "../components/astro/content/MyStory.astro";
+import WhyWeb from "../components/astro/content/WhyWeb.astro";
+import Link from "../components/astro/Link.astro";
+import GitHub from "../components/icons/GitHub";
+import LinkedIn from "../components/icons/LinkedIn";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+  <Header />
+  <Banner />
+  <section class="px-4 max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+      {t("About me")}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      {t("Why web programming?")}
+    </h3>
+    <WhyWeb />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      Why Payflip?
+    </h3>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      When I found Payflip's documentation about developer levels, I stopped
+      scrolling. Most companies hide what they expect from juniors. Payflip lays
+      it out clearly: at the A1 level, you work on specific tasks, you need
+      guidance on most things, and you prioritize accuracy over speed. That
+      honesty matters to me.
+    </p>
+
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Payflip's transparency about expectations, combined with structured
+      guidance and a culture that values learning, is exactly what I need to
+      grow into a stronger developer. I'm not looking for perfection. I'm
+      looking for a place where I can be honest about what I don't know yet, and
+      where that's okay. That's why I believe I'd be a good fit: I bring the
+      discipline of a scientist to code. I don't cut corners, I document my
+      process, and I treat debugging as a systematic investigation rather than a
+      guessing game. You get a developer who understands that accuracy today
+      prevents bugs tomorrow, paired with the humility to ask for help and the
+      drive to turn that guidance into independence. I'm ready to start at the
+      A1 level, do the work, and grow into a long-term asset for the team.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+      <span class="text-xl font-black">{t("Find me on")}:</span>
+      <div class="flex gap-4">
+        <Link
+          title={t("My GitHub repository")}
+          className=" bg-white px-3 py-2"
+          target="_blank"
+          href="https://github.com/cararcel"
+          ><GitHub className="size-6" />GitHub
+        </Link>
+        <Link
+          title={t("My LinkedIn profile")}
+          className="  bg-blue-600 text-white px-3 py-2"
+          target="_blank"
+          href="https://www.linkedin.com/in/arce-camila/"
+          ><LinkedIn className="size-6 fill-current" /> LinkedIn
+        </Link>
+      </div>
+    </div>
+  </section>
+  <Projects />
+  <Footer />
+  <CookieBanner client:load trans={t("cookie")} />
+</Layout>

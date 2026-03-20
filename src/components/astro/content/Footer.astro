@@ -1,8 +1,8 @@
 ---
-import GitHub from '../../icons/GitHub';
-import Card from '../Card.astro';
-import Link from '../Link.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import GitHub from "../../icons/GitHub";
+import Card from "../Card.astro";
+import Link from "../Link.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 
@@ -10,21 +10,21 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="flex gap-2 max-w-4xl mx-auto pb-10 my-10">
-    <Card
-        className="w-full bg-blue-300 flex flex-wrap justify-center gap-4 items-center p-4 font-black tracking-wider"
+  <Card
+    className="w-full bg-blue-300 flex flex-wrap justify-center gap-4 items-center p-4 font-black tracking-wider"
+  >
+    <span>
+      Copyright &copy;{" "}
+      <time dateTime={year}>{year}</time>
+    </span>
+    <Link
+      title="Edit the page on GitHub"
+      className=" bg-white px-2 py-1"
+      target="_blank"
+      href="https://github.com/cararcel/camiarce.dev/blob/main/index.html"
+      label="Edit on Github"
     >
-        <span>
-            Copyright &copy;{' '}
-            <time dateTime={year}>{year}</time>
-        </span>
-        <Link
-            title="Edit the page on GitHub"
-            className=" bg-white px-2 py-1"
-            target="_blank"
-            href="https://github.com/cararcel/camiarce.dev/blob/main/index.html"
-            label="Edit on Github"
-        >
-            <GitHub className="size-6" />
-        </Link>
-    </Card>
+      <GitHub className="size-6" />
+    </Link>
+  </Card>
 </footer>

@@ -1,0 +1,91 @@
+---
+import Banner from "../components/astro/content/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/content/Header.astro";
+import AboutMe from "../components/astro/content/AboutMe.astro";
+import Projects from "../components/astro/Projects.astro";
+import Footer from "../components/astro/content/Footer.astro";
+import CookieBanner from "../components/react/CookieBanner.jsx";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import MyStory from "../components/astro/content/MyStory.astro";
+import WhyWeb from "../components/astro/content/WhyWeb.astro";
+import Link from "../components/astro/Link.astro";
+import GitHub from "../components/icons/GitHub";
+import LinkedIn from "../components/icons/LinkedIn";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+  <Header />
+  <Banner />
+  <section class="px-4 max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+      {t("About me")}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      {t("Why web programming?")}
+    </h3>
+    <WhyWeb />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      Why Delaware?
+    </h3>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      What caught my attention about EASI is how much importance you place on
+      people, not just technology. I’m still getting to know the company in
+      depth, but your focus on People-first & Employee Happiness and Continuous
+      Learning & Growth really stood out to me. At this stage of my career, I’m
+      looking for an environment where learning is supported, where juniors are
+      guided, and where growth is something built over time, not expected from
+      day one. EASI feels like a place where that kind of progression is part of
+      the culture.
+    </p>
+
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      I’m particularly drawn to environments where I can take ownership of my
+      work, collaborate with others, and continuously improve. My background in
+      science shaped the way I approach problems: breaking them down, testing
+      solutions, documenting clearly, and refining approaches until they work.
+      Combined with my experience living in different countries, I’ve learned to
+      adapt quickly, communicate across different contexts, and stay positive
+      even when things are uncertain, something I naturally bring into
+      development.
+    </p>
+
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      I’m still early in my journey as a developer, but I see that as a
+      strength. I’m actively building my skills in backend development and .NET,
+      and I genuinely enjoy the process of learning and improving step by step.
+      I’m motivated by environments where I can contribute, grow, and be
+      challenged, and where a strong team spirit and positive attitude are part
+      of how people work together. That’s the kind of environment I’m looking
+      for—and the kind of mindset I bring with me.
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+      <span class="text-xl font-black">{t("Find me on")}:</span>
+      <div class="flex gap-4">
+        <Link
+          title={t("My GitHub repository")}
+          className=" bg-white px-3 py-2"
+          target="_blank"
+          href="https://github.com/cararcel"
+          ><GitHub className="size-6" />GitHub
+        </Link>
+        <Link
+          title={t("My LinkedIn profile")}
+          className="  bg-blue-600 text-white px-3 py-2"
+          target="_blank"
+          href="https://www.linkedin.com/in/arce-camila/"
+          ><LinkedIn className="size-6 fill-current" /> LinkedIn
+        </Link>
+      </div>
+    </div>
+  </section>
+  <Projects />
+  <Footer />
+  <CookieBanner client:load trans={t("cookie")} />
+</Layout>

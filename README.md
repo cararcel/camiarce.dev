@@ -1,34 +1,76 @@
-Hi again, here are all the instruction to get you project (again)
+# camiarce.dev
 
-If you are changing laptop/computer, get the project from github
-    - Go to project
-    - Code
-    - ssh (copy)
-    - Go top terminal 
-    - type: git clone (paste)
-    - npm install
-    - npm run dev
-    - listo!
+Personal portfolio built with Astro and React.
 
+## Getting started
 
-About my page architecture.
-Im using Astro/ React. Why? Becqause I wanted to use react and Astro allow me to do it in a simple way. Astro improve performances by rending component on the server and sending lightweight HTML to browser. Why react? Because I like it, I like to have components, its more compartimentalized for my brain and I think I have everything more organize.
+If you are setting up the project on a new computer:
 
-Organization:
- -Public: images
- -src: all the rest
-    - compenent: astro-simples, react: with js, icons
-    - i18n: internalization, what ima using for changin language
-    - layout: basic design (I have a cat that you can see when yoi inspect the website)
-    - pages: diferent pages for every language
-    - style: CSS
+1. Go to the GitHub repository.
+2. Click **Code** and copy the SSH URL.
+3. Open your terminal and clone the project:
 
-How I put different languages?
-Im using i18n, I can set a laguage and create a dictionary with the words that I want to change
-    - To add or change translations go assets>translations>file of the language
-    - For the main text (the big ones) it is set on the page of the website. Another option fot that is to add the big text in the ´dictionary´. I did it, but it is easier for me with the pages when I want to change or edit some text. Easier to read for me
+```bash
+git clone <your-repository-url>
+```
 
+4. Install dependencies:
 
-Change font:
-    - add font to public>assets>font
-    - change the font on styles>css
+```bash
+npm install
+```
+
+5. Start the development server:
+
+```bash
+npm run dev
+```
+
+## Tech stack
+
+This site uses Astro with React components.
+
+- Astro keeps the site fast by rendering as much as possible on the server and sending lightweight HTML to the browser.
+- React is used because it makes the project easier to organize into reusable components.
+
+## Project structure
+
+### `public/`
+
+Static files such as:
+
+- images
+- favicons
+- fonts in `public/assets/fonts`
+
+### `src/`
+
+Main source code for the site:
+
+- `components/`
+  Astro components, React components, and icons
+- `i18n/`
+  language utilities and translation setup
+- `layouts/`
+  shared page layout
+- `pages/`
+  route files for each page and language
+- `styles/`
+  global CSS
+- `assets/`
+  local images and translation JSON files
+
+## Languages and translations
+
+The site uses i18n to manage multiple languages.
+
+- Translation files are in `src/assets/translation/`
+- Language configuration is in `src/i18n/`
+- Bigger page-specific text can be written directly inside the page files in `src/pages/`
+
+That setup makes small UI text easy to translate with JSON files, while larger content stays easier to read and edit in the page itself.
+
+## Changing fonts
+
+1. Add the font file to `public/assets/fonts`
+2. Update the font styles in `src/styles/global.css`

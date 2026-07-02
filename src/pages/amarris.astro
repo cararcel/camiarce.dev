@@ -1,0 +1,102 @@
+---
+import Banner from "../components/astro/content/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/content/Header.astro";
+import AboutMe from "../components/astro/content/AboutMe.astro";
+import Projects from "../components/astro/Projects.astro";
+import Footer from "../components/astro/content/Footer.astro";
+import CookieBanner from "../components/react/CookieBanner.jsx";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import MyStory from "../components/astro/content/MyStory.astro";
+import WhyWeb from "../components/astro/content/WhyWeb.astro";
+import Link from "../components/astro/Link.astro";
+import GitHub from "../components/icons/GitHub";
+import LinkedIn from "../components/icons/LinkedIn";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+  <Header />
+  <Banner />
+  <section class="px-4 max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+      {t("About me")}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      {t("Why web programming?")}
+    </h3>
+    <WhyWeb />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      Why Amarris?
+    </h3>
+    <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+      Amarris caught my attention because the role is clearly presented as a
+      place to grow, not just a place where a junior developer is expected to
+      already know everything. The focus on mentoring, code reviews, pair
+      programming and teamwork is important to me because I am looking for an
+      environment where I can improve through real practice, feedback and
+      collaboration.
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        I also like that the work has a concrete purpose. Building digital tools
+        for accountants, entrepreneurs and small businesses feels practical and
+        useful. I enjoy frontend development because it is where technical
+        structure and user experience meet, and I like the idea of contributing
+        to products that people use in their daily work.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        The fact that the role is officially a frontend position, with the
+        possibility to grow into broader fullstack work, also fits well with
+        where I am now. My current focus is frontend development: building
+        responsive interfaces, reusable components, dynamic pages and
+        API-connected features. At the same time, I am comfortable understanding
+        how the frontend connects with backend logic, data and real product
+        requirements.
+      </p>
+      <h3 class="text-3xl mb-6 font-title font-black tracking-wide">Why me?</h3>
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        I bring a strong frontend foundation, concrete project experience and a
+        serious learning mindset. I can build responsive interfaces, reusable
+        components, dynamic pages and API-connected features. My scientific
+        background also gives me a structured and analytical way of solving
+        problems — basically, I like understanding why something works, why it
+        breaks, and how to fix it properly.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        I am junior, but I am autonomous, consistent and not afraid to ask
+        questions when needed. I enjoy learning, improving through feedback and
+        turning “I don’t know yet” into “I figured it out.” I would bring
+        curiosity, reliability and a bit of stubborn debugging energy to the
+        team.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+        <span class="text-xl font-black">{t("Find me on")}:</span>
+        <div class="flex gap-4">
+          <Link
+            title={t("My GitHub repository")}
+            className=" bg-white px-3 py-2"
+            target="_blank"
+            href="https://github.com/cararcel"
+            ><GitHub className="size-6" />GitHub
+          </Link>
+          <Link
+            title={t("My LinkedIn profile")}
+            className="  bg-blue-600 text-white px-3 py-2"
+            target="_blank"
+            href="https://www.linkedin.com/in/arce-camila/"
+            ><LinkedIn className="size-6 fill-current" /> LinkedIn
+          </Link>
+        </div>
+      </div>
+    </p>
+    <Projects />
+    <Footer />
+    <CookieBanner client:load trans={t("cookie")} />
+  </section>
+</Layout>

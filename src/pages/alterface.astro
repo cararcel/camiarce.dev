@@ -1,0 +1,178 @@
+---
+import Banner from "../components/astro/content/Banner.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/astro/content/Header.astro";
+import AboutMe from "../components/astro/content/AboutMe.astro";
+import Projects from "../components/astro/Projects.astro";
+import Footer from "../components/astro/content/Footer.astro";
+import CookieBanner from "../components/react/CookieBanner.jsx";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import MyStory from "../components/astro/content/MyStory.astro";
+import WhyWeb from "../components/astro/content/WhyWeb.astro";
+import Link from "../components/astro/Link.astro";
+import GitHub from "../components/icons/GitHub";
+import LinkedIn from "../components/icons/LinkedIn";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout>
+  <Header />
+  <Banner />
+  <section class="px-4 max-w-4xl mx-auto my-12 md:my-24">
+    <h2 id="about-me" class="text-5xl mb-6 font-title font-black tracking-wide">
+      {t("About me")}
+    </h2>
+    <MyStory />
+
+    <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+      {t("Why web programming?")}
+    </h3>
+    <WhyWeb />
+    <!-- SECTION: WHY ALTERFACE -->
+    <section id="why-alterface">
+      <h3 class="text-3xl mb-6 font-title font-black tracking-wide">
+        Why Alterface?
+      </h3>
+
+      <p
+        class="text-lg text-justify text-black leading-8 tracking-wide mb-8 italic"
+      >
+        "Because where else can a biochemist-turned-developer find a company
+        that literally builds magic for a living?"
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        Let me be honest: I didn't grow up dreaming of becoming a software
+        engineer. I grew up dreaming of becoming a scientist. And I did — until
+        life had other plans and I discovered that code is just another kind of
+        experiment. So when I found Alterface, something clicked. You're not
+        building another CRUD app or yet another SaaS dashboard. You're building
+        experiences that make people gasp, laugh, and forget reality for a few
+        minutes. That's the kind of work where the "why" matters as much as the
+        "how."
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        Legacy code doesn't scare me — it intrigues me. My entire thesis was 3
+        years of digging into someone else's research, finding patterns, and
+        improving on them. Your Salto language and existing codebases? That's
+        not a barrier; that's an adventure. C# is my home turf: I built
+        CatCareApi with ASP.NET Core, Entity Framework, and SQL Server, and I
+        know what good architecture looks like even if I'm still leveling up.
+        I'm ready to learn your stack and your ways.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        Documentation is in my DNA. Coming from academia, I was trained to write
+        thorough, precise technical documentation because if it wasn't
+        documented, it didn't happen. You need installation docs for clients and
+        internal teams? I actually enjoy that. And on-site installations around
+        the world? I've relocated across four countries, adapted to new cultures
+        and languages more times than I can count. Traveling to install
+        attractions in places I've never been sounds like the best job perk ever
+        invented.
+      </p>
+
+      <p
+        class="text-lg text-justify text-black leading-8 tracking-wide mb-8 italic"
+      >
+        And let's be practical: I live in Belgium. Wavre is practically down the
+        road from Perwez. This isn't a "maybe someday I'll move" situation — I'm
+        already here, ready to go. Alterface sits at the intersection of
+        creativity, engineering, and real-world wonder. That's exactly where I
+        want to build my career — not behind a screen pushing pixels, but
+        building things that make people feel something.
+      </p>
+    </section>
+
+    <!-- SECTION: WHY ME? -->
+    <section id="why-me" class="mt-16">
+      <h3 class="text-3xl mb-6 font-title font-black tracking-wide">Why Me?</h3>
+
+      <p
+        class="text-lg text-justify text-black leading-8 tracking-wide mb-8 italic"
+      >
+        "Because I debug proteins AND code — and honestly, proteins are harder."
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        Here's the deal: I'm a junior developer. I won't pretend I have 10 years
+        of experience shipping enterprise software. What I do have is a profile
+        that most candidates don't. I learned how to learn — the hard way.
+        Biochemistry to web development isn't a "I watched a tutorial on
+        YouTube" transition. It was months of disciplined study, structured
+        training, and building real projects from scratch. The same
+        hypothesis-driven mindset that helped me investigate genetic mutations
+        in a German research lab now helps me track down bugs in a Node.js
+        backend or debug a C# controller.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        I've worked in legacy before — it just wasn't called code. Three years
+        of undergraduate research meant inheriting protocols, deciphering other
+        people's methodologies, and figuring out how to extend work that came
+        before me. Sound familiar? That's exactly what you're describing in your
+        job post: "dive into legacy code, adding new features and fixing bugs."
+        I've been doing a version of that my whole career.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        I take ownership. End to end. My thesis wasn't a group assignment — I
+        managed data collection, analysis, technical reporting, and publication
+        prep for three years. At Alterface, you want engineers who can take a
+        project from specification to on-site installation. That kind of
+        full-cycle ownership isn't new to me; it's how I've always worked. And
+        I'm multilingual and multicultural — for real. Spanish native, English
+        C1, French B2 (and climbing). I've lived in Chile, Germany, France, and
+        Belgium. Your clients and partners are global, your on-site
+        installations take you all over the world, and communication matters to
+        you. I'm not just comfortable in international environments — I thrive
+        in them.
+      </p>
+
+      <p class="text-lg text-justify text-black leading-8 tracking-wide mb-8">
+        And yes — I'm still hungry. I'm currently picking up Python (because you
+        mentioned it), sharpening TypeScript, and building a full-stack client
+        project in Laravel + React. I'm not someone who finished a bootcamp and
+        stopped. I'm someone who treats learning like breathing. What I lack in
+        years of professional dev experience, I make up for in scientific rigor
+        and analytical thinking, international adaptability, natural-born
+        documentation skills, genuine love for debugging and problem-solving,
+        and a deep, slightly stubborn drive to get things right.
+      </p>
+
+      <p
+        class="text-lg text-justify text-black leading-8 tracking-wide mb-8 italic"
+      >
+        You're not just hiring a junior developer. You're hiring someone who
+        already reinvented herself once — and is ready to do it again, this time
+        building attractions that make people smile. That sounds like a pretty
+        good deal to me.
+      </p>
+    </section>
+
+    <div class="flex flex-col md:flex-row gap-4 mt-8 md:items-center">
+      <span class="text-xl font-black">{t("Find me on")}:</span>
+      <div class="flex gap-4">
+        <Link
+          title={t("My GitHub repository")}
+          className=" bg-white px-3 py-2"
+          target="_blank"
+          href="https://github.com/cararcel"
+          ><GitHub className="size-6" />GitHub
+        </Link>
+        <Link
+          title={t("My LinkedIn profile")}
+          className="  bg-blue-600 text-white px-3 py-2"
+          target="_blank"
+          href="https://www.linkedin.com/in/arce-camila/"
+          ><LinkedIn className="size-6 fill-current" /> LinkedIn
+        </Link>
+      </div>
+    </div>
+  </section>
+  <Projects />
+  <Footer />
+  <CookieBanner client:load trans={t("cookie")} />
+</Layout>

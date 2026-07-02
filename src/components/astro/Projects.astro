@@ -25,11 +25,29 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       className="border-cyan-600 bg-cyan-600"
     >
       <Fragment slot="tags">
-        <Tag className="bg-blue-300">ReactJS</Tag>
+        <Tag className="bg-sky-300 text-sky-950">ReactJS</Tag>
         <Tag className="bg-red-200 text-red-950">Laravel</Tag>
         <Tag className="bg-indigo-200 text-indigo-950">Inertia.js</Tag>
-        <Tag className="bg-cyan-300">Tailwind CSS</Tag>
-        <Tag className="bg-yellow-200 text-yellow-950">Vite</Tag>
+        <Tag className="bg-cyan-300 text-cyan-950">Tailwind CSS</Tag>
+        <Tag className="bg-purple-200 text-purple-950">Vite</Tag>
+        <Tag>
+          <MobilePhone className="size-5" />
+          {t("Responsive design")}
+        </Tag>
+      </Fragment>
+    </Project>
+    <Project
+      name="CatCareApi"
+      imgName="cat-care"
+      githubUrl="https://github.com/cararcel/CatCareApi"
+      githubTitle={t("Check the GitHub repository")}
+      className="border-gray-600 bg-gray-600"
+    >
+      <Fragment slot="tags">
+        <Tag className="bg-violet-300 text-violet-950">C#</Tag>
+        <Tag className="bg-purple-300 text-purple-950">ASP.NET Core</Tag>
+        <Tag className="bg-violet-200 text-violet-950">.NET 10</Tag>
+        <Tag className="bg-blue-300 text-blue-950">REST API</Tag>
         <Tag>
           <MobilePhone className="size-5" />
           {t("Responsive design")}
@@ -54,8 +72,8 @@ const t = useTranslations(getLangFromUrl(Astro.url));
           <LinkIcon className="size-5" />
         </Link>
         <Tag className="bg-black text-white">Astro</Tag>
-        <Tag className="bg-cyan-300">TailwindCSS</Tag>
-        <Tag className="bg-yellow-400">JavaScript</Tag>
+        <Tag className="bg-cyan-300 text-cyan-950">TailwindCSS</Tag>
+        <Tag className="bg-yellow-400 text-yellow-950">JavaScript</Tag>
         <Tag>
           <MobilePhone className="size-5" />
           {t("Responsive design")}
@@ -79,8 +97,8 @@ const t = useTranslations(getLangFromUrl(Astro.url));
         >
           <LinkIcon className="size-5" />
         </Link>
-        <Tag className="bg-orange-400"> HTML </Tag>
-        <Tag className="bg-blue-300"> CSS</Tag>
+        <Tag className="bg-orange-400 text-orange-950"> HTML </Tag>
+        <Tag className="bg-blue-300 text-blue-950"> CSS</Tag>
         <Tag> <MobilePhone className="size-5" />{t("Responsive design")}</Tag>
         <Tag> <ColorSwatch className="size-5" />{t("Design integration")}</Tag>
       </Fragment>
@@ -93,9 +111,9 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       className="border-purple-400 bg-purple-400"
     >
       <Fragment slot="tags">
-        <Tag className="bg-orange-400"> HTML </Tag>
-        <Tag className="bg-blue-300"> CSS</Tag>
-        <Tag className="bg-yellow-400"> Javascript</Tag>
+        <Tag className="bg-orange-400 text-orange-950"> HTML </Tag>
+        <Tag className="bg-blue-300 text-blue-950"> CSS</Tag>
+        <Tag className="bg-yellow-400 text-yellow-950"> Javascript</Tag>
         <Tag> <Debugging className="size-5" />{t("Debugging")}</Tag>
         <Tag> <Seo className="size-5" /> SEO</Tag>
       </Fragment>
@@ -108,7 +126,7 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       className="border-orange-400 bg-orange-400"
     >
       <Fragment slot="tags">
-        <Tag className="bg-blue-300"> ReactJS </Tag>
+        <Tag className="bg-sky-300 text-sky-950"> ReactJS </Tag>
         <Tag className="bg-pink-400"> SCSS</Tag>
         <Tag> <MobilePhone className="size-5" />{t("Responsive design")}</Tag>
         <Tag> <ColorSwatch className="size-5" /> Design integration</Tag>
@@ -122,9 +140,9 @@ const t = useTranslations(getLangFromUrl(Astro.url));
       className="border-green-400 bg-green-400"
     >
       <Fragment slot="tags">
-        <Tag className="bg-orange-400"> HTML </Tag>
-        <Tag className="bg-blue-300"> CSS</Tag>
-        <Tag className="bg-yellow-400"> JavaScript</Tag>
+        <Tag className="bg-orange-400 text-orange-950"> HTML </Tag>
+        <Tag className="bg-blue-300 text-blue-950"> CSS</Tag>
+        <Tag className="bg-yellow-400 text-yellow-950"> JavaScript</Tag>
         <Tag> <ColorSwatch className="size-5" />{t("Design integration")}</Tag>
       </Fragment>
     </Project>
